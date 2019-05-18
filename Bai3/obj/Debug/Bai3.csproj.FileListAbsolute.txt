@@ -1,0 +1,17 @@
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\bin\Debug\Bai3.exe.config
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\bin\Debug\Bai3.exe
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\bin\Debug\Bai3.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.Form1.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.Properties.Resources.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.csproj.GenerateResource.Cache
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.exe
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.Form2.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.xml
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.MainForm.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.TransparentForm.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.csproj.CoreCompileInputs.cache
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.csprojResolveAssemblyReference.cache
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Debug\Bai3.Form3.resources

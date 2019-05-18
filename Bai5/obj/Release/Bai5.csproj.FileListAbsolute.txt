@@ -1,0 +1,11 @@
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\bin\Release\Bai5.exe
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\bin\Release\Bai5.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Release\Bai5.Properties.Resources.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Release\Bai5.csproj.GenerateResource.Cache
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Release\Bai5.exe
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Release\Bai5.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\bin\Release\Bunifu_UI_v1.5.3.dll
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Release\Bai5.UI.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Release\Bai5.XoayHinh.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\bin\Release\Animator.dll
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\bin\Release\Animator.pdb

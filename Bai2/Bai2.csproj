@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F6F5BDF-11E4-4E61-A62F-E6E5F8143BD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VuiHocTiengAnh</RootNamespace>
+    <AssemblyName>Vui hoc tieng anh</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDataForm.Designer.cs">
+      <DependentUpon>AddDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewUnitForm.Designer.cs">
+      <DependentUpon>AddNewUnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeText.Designer.cs">
+      <DependentUpon>ChangeText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data.Designer.cs">
+      <DependentUpon>Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditWordInUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditWordInUnitForm.Designer.cs">
+      <DependentUpon>EditWordInUnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainform.Designer.cs">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game1.Designer.cs">
+      <DependentUpon>Game1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game2.Designer.cs">
+      <DependentUpon>Game2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game3.Designer.cs">
+      <DependentUpon>Game3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game4.Designer.cs">
+      <DependentUpon>Game4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game5.Designer.cs">
+      <DependentUpon>Game5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Learn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Learn.Designer.cs">
+      <DependentUpon>Learn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxCustoms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxCustoms.Designer.cs">
+      <DependentUpon>MessageBoxCustoms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource.Designer.cs" />
+    <Compile Include="ResultTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultTest.Designer.cs">
+      <DependentUpon>ResultTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectBooks.Designer.cs">
+      <DependentUpon>SelectBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectGame.Designer.cs">
+      <DependentUpon>SelectGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingGame.Designer.cs">
+      <DependentUpon>SettingGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThietLapDuLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThietLapDuLieu.Designer.cs">
+      <DependentUpon>ThietLapDuLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDataForm.resx">
+      <DependentUpon>AddDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewUnitForm.resx">
+      <DependentUpon>AddNewUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeText.resx">
+      <DependentUpon>ChangeText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data.resx">
+      <DependentUpon>Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWordInUnitForm.resx">
+      <DependentUpon>EditWordInUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainform.resx">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game1.resx">
+      <DependentUpon>Game1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game2.resx">
+      <DependentUpon>Game2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game3.resx">
+      <DependentUpon>Game3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game4.resx">
+      <DependentUpon>Game4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game5.resx">
+      <DependentUpon>Game5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Learn.resx">
+      <DependentUpon>Learn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxCustoms.resx">
+      <DependentUpon>MessageBoxCustoms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultTest.resx">
+      <DependentUpon>ResultTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectBooks.resx">
+      <DependentUpon>SelectBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectGame.resx">
+      <DependentUpon>SelectGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingGame.resx">
+      <DependentUpon>SettingGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThietLapDuLieu.resx">
+      <DependentUpon>ThietLapDuLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="file_text\Unit_21_AtTheBirdPark.txt" />
+    <None Include="file_text\Unit_20_AtTheShoppingCentre.txt" />
+    <None Include="file_text\Unit_19_AtTheSupermarket.txt" />
+    <None Include="file_text\Unit_18_AtTheFastFoodRestaurant.txt" />
+    <None Include="file_text\Unit_17_OurSchoolConcert.txt" />
+    <None Include="file_text\Unit_16_OurPetShow.txt" />
+    <None Include="file_text\Unit_15_It%27s_sunny_today.txt" />
+    <None Include="file_text\Unit_14_HappyBirthdat,David.txt" />
+    <None Include="file_text\Unit_13_Bedtime.txt" />
+    <None Include="file_text\Unit_12_Let%27s_relax.txt" />
+    <None Include="file_text\Unit_11_In_the_bathroom.txt" />
+    <None Include="file_text\Unit_10_Dinner_time.txt" />
+    <None Include="file_text\Unit_9_InTheKitchen.txt" />
+    <None Include="file_text\Unit_8_SnackTime.txt" />
+    <None Include="file_text\Unit_7_OutdoorPlaytime.txt" />
+    <None Include="file_text\Unit_6_IndoorPlaytime.txt" />
+    <None Include="file_text\Unit_5_LessonTime.txt" />
+    <None Include="file_text\Unit_4_GoingToSchool.txt" />
+    <None Include="file_text\Unit_3_BreafastTime.txt" />
+    <None Include="file_text\Unit_2_Let%27sGetDressed.txt" />
+    <None Include="file_text\Unit_1_It%27sTimeToWakeUp.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="icon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

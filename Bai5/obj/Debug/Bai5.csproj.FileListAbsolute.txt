@@ -1,0 +1,13 @@
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\bin\Debug\Bai5.exe
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\bin\Debug\Bai5.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Debug\Bai5.Properties.Resources.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Debug\Bai5.csproj.GenerateResource.Cache
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Debug\Bai5.exe
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Debug\Bai5.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Debug\Bai5.csprojResolveAssemblyReference.cache
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Debug\Bai5.UI.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\bin\Debug\Animator.dll
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\bin\Debug\Animator.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Debug\Bai5.XoayHinh.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai5\obj\Debug\Bai5.csproj.CoreCompileInputs.cache

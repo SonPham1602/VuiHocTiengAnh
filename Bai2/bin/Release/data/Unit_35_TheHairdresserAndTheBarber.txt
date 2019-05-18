@@ -1,0 +1,14 @@
+35_barber
+35_cape
+35_curler
+35_curly
+35_dry
+35_fringe
+35_hair
+35_hair_cream
+35_hairdresser
+35_hairdryer
+35_hand_mirror
+35_long
+35_short
+35_straight

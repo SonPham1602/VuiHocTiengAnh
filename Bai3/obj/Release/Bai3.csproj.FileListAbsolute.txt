@@ -1,0 +1,13 @@
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\bin\Release\Bai3.exe.config
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\bin\Release\Bai3.exe
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\bin\Release\Bai3.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Release\Bai3.Form1.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Release\Bai3.Properties.Resources.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Release\Bai3.csproj.GenerateResource.Cache
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Release\Bai3.exe
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Release\Bai3.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Release\Bai3.Form2.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\bin\Release\Bunifu_UI_v1.5.3.dll
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Release\Bai3.TransparentForm.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Release\Bai3.MainForm.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai3\obj\Release\Bai3.Form3.resources

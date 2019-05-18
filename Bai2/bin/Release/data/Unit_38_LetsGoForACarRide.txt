@@ -1,0 +1,15 @@
+38_bus_stop
+38_container_lorry
+38_cyclist
+38_double_decker_bus
+38_drill
+38_litter_bin
+38_newsagent
+38_overhead_bridge
+38_pedestrian
+38_pedestrian_crossing
+38_road_sign
+38_sport_car
+38_taxi
+38_traffic_lights
+38_underpass

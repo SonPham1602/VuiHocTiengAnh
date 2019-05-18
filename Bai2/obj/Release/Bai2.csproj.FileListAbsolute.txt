@@ -1,0 +1,70 @@
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\bin\Release\Vui hoc tieng anh.exe.config
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\bin\Release\Vui hoc tieng anh.exe
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\bin\Release\Vui hoc tieng anh.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.About.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.ChangeText.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.CreateAccount.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Data.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Mainform.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Game1.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Game2.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Game3.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Game4.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Game5.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Help.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Home.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Learn.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.login.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.ResultTest.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Search.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.SelectGame.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Setting.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.SettingGame.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Test.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.ThietLapDuLieu.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.csproj.GenerateResource.Cache
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Vui hoc tieng anh.exe
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Vui hoc tieng anh.pdb
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.AddDataForm.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.Loading.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\VuiHocTiengAnh.Properties.Resources.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.AddNewUnitForm.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.EditWordInUnitForm.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.SelectBooks.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.MessageBoxCustoms.resources
+C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Release\Bai2.csprojResolveAssemblyReference.cache
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\bin\Release\Vui hoc tieng anh.exe.config
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Vui hoc tieng anh.exe
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Vui hoc tieng anh.pdb
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\bin\Release\Vui hoc tieng anh.exe
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\bin\Release\Vui hoc tieng anh.pdb
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.csprojResolveAssemblyReference.cache
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.About.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.AddDataForm.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.AddNewUnitForm.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.ChangeText.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.CreateAccount.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Data.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.EditWordInUnitForm.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Loading.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Mainform.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Game1.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Game2.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Game3.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Game4.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Game5.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Help.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Home.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Learn.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.login.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.MessageBoxCustoms.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\VuiHocTiengAnh.Properties.Resources.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.ResultTest.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Search.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.SelectBooks.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.SelectGame.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Setting.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.SettingGame.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Test.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.ThietLapDuLieu.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.csproj.GenerateResource.Cache

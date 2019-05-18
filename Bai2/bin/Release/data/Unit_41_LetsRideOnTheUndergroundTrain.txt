@@ -1,0 +1,17 @@
+41_briefcase
+41_carriage
+41_closed
+41_escalator
+41_headlight
+41_hold
+41_listen
+41_map
+41_open
+41_passengers
+41_shopping_bag
+41_sign
+41_sliding_door
+41_tourist
+41_train
+41_tunnel
+41_walkman

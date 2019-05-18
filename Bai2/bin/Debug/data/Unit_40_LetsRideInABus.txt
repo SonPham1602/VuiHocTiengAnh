@@ -1,0 +1,16 @@
+40_belt_strip
+40_bus_driver
+40_coin_machine
+40_coins
+40_get_off
+40_get_on
+40_handbag
+40_handle
+40_purse
+40_seat
+40_sit_down
+40_stand_up
+40_ticket
+40_ticket_machines
+40_umbrella
+40_used_ticket_box

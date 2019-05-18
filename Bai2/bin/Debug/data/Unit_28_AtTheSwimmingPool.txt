@@ -1,0 +1,16 @@
+28_armbands
+28_coach
+28_deckchair
+28_dive
+28_diving_board
+28_float
+28_goggles
+28_race
+28_splash
+28_sunglasses
+28_sunshade
+28_suntan_lotion
+28_swimming_cap
+28_swimming_trunks
+28_swimsuit
+28_visor

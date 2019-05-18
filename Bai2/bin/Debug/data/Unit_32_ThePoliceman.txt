@@ -1,0 +1,16 @@
+32_buttons
+32_handcuffs
+32_lamp_post
+32_lorry
+32_mittens
+32_name_tag
+32_nightstick
+32_peaked_cap
+32_police_car
+32_police_station
+32_policeman
+32_policemen
+32_policewoman
+32_report_book
+32_walkie_talkie
+32_whistle

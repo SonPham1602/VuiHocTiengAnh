@@ -1,0 +1,16 @@
+30_airletter
+30_bunch_of_keys
+30_deliver
+30_envelope
+30_letter
+30_letterbox
+30_mailbag
+30_mailbox
+30_packet
+30_parcel
+30_post
+30_post_office
+30_postal_van
+30_postman
+30_scooter
+30_stamp
