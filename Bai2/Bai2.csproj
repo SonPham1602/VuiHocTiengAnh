@@ -7,7 +7,7 @@
     <ProjectGuid>{6F6F5BDF-11E4-4E61-A62F-E6E5F8143BD1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VuiHocTiengAnh</RootNamespace>
+    <RootNamespace>Bai2</RootNamespace>
     <AssemblyName>Vui hoc tieng anh</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -232,6 +232,12 @@
     <Compile Include="SettingGame.Designer.cs">
       <DependentUpon>SettingGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShowImageTestResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowImageTestResult.Designer.cs">
+      <DependentUpon>ShowImageTestResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingGame.resx">
       <DependentUpon>SettingGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowImageTestResult.resx">
+      <DependentUpon>ShowImageTestResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>

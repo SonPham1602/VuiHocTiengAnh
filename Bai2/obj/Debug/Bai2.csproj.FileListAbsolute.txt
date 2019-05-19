@@ -36,3 +36,6 @@ C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Debug\Bai2.cs
 C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Debug\Vui hoc tieng anh.exe
 C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Debug\Vui hoc tieng anh.pdb
 C:\Users\Welcome\Desktop\DATA\BAI TAP\C Sharp\Tuan1\Tuan1\Bai2\obj\Debug\VuiHocTiengAnh.SelectBooks.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\bin\Debug\Vui hoc tieng anh.exe.config
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Debug\Vui hoc tieng anh.exe
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Debug\Vui hoc tieng anh.pdb

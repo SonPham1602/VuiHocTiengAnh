@@ -483,6 +483,12 @@ namespace Bai2
             result = DSWord[n];
             return result.getAnh();
         }
+        public Image getImageWordByWord(string nameword)
+        {
+            Word result = new Word();
+            result = FindWord(nameword);
+            return result.getAnh();
+        }
         public Word getWordByNumber(int n)
         {
             return DSWord[n];

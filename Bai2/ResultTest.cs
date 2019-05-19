@@ -73,5 +73,20 @@ namespace Bai2
         private void ResultTest_Load(object sender, EventArgs e)
         {
         }
+
+
+        private void lv_ShowResult_DoubleClick(object sender, EventArgs e)
+        {
+            if (lv_ShowResult.SelectedItems.Count == 1)
+            {
+                ListView.SelectedListViewItemCollection items = lv_ShowResult.SelectedItems;
+
+                ListViewItem lvItem = items[0];
+                string image = lvItem.SubItems[1].Text;
+                ShowImageTestResult form = new ShowImageTestResult(image);
+                form.Show();
+
+            }
+        }
     }
 }

@@ -108,6 +108,7 @@
             this.lv_ShowResult.TabIndex = 7;
             this.lv_ShowResult.UseCompatibleStateImageBehavior = false;
             this.lv_ShowResult.View = System.Windows.Forms.View.Details;
+            this.lv_ShowResult.DoubleClick += new System.EventHandler(this.lv_ShowResult_DoubleClick);
             // 
             // cl_stt
             // 

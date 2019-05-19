@@ -58,7 +58,6 @@ C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Home.reso
 C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Learn.resources
 C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.login.resources
 C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.MessageBoxCustoms.resources
-C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\VuiHocTiengAnh.Properties.Resources.resources
 C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.ResultTest.resources
 C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Search.resources
 C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.SelectBooks.resources
@@ -68,3 +67,5 @@ C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.SettingGa
 C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Test.resources
 C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.ThietLapDuLieu.resources
 C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.csproj.GenerateResource.Cache
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.Properties.Resources.resources
+C:\Users\Welcome\Documents\GitHub\VuiHocTiengAnh\Bai2\obj\Release\Bai2.ShowImageTestResult.resources
