@@ -53,6 +53,7 @@
             this.answerC = new System.Windows.Forms.RadioButton();
             this.answerB = new System.Windows.Forms.RadioButton();
             this.answerA = new System.Windows.Forms.RadioButton();
+            this.btn_help = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pb_show)).BeginInit();
             this.pn_mark.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bt_close)).BeginInit();
@@ -60,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bt_start)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_next_qt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_help)).BeginInit();
             this.SuspendLayout();
             // 
             // pb_show
@@ -99,6 +101,7 @@
             // 
             this.bt_close.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bt_close.BackColor = System.Drawing.Color.Transparent;
+            this.bt_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_close.Image = ((System.Drawing.Image)(resources.GetObject("bt_close.Image")));
             this.bt_close.ImageActive = null;
             this.bt_close.Location = new System.Drawing.Point(715, 22);
@@ -114,6 +117,7 @@
             // 
             this.bt_setting_game.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bt_setting_game.BackColor = System.Drawing.Color.Transparent;
+            this.bt_setting_game.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_setting_game.Image = ((System.Drawing.Image)(resources.GetObject("bt_setting_game.Image")));
             this.bt_setting_game.ImageActive = null;
             this.bt_setting_game.Location = new System.Drawing.Point(353, 22);
@@ -129,6 +133,7 @@
             // 
             this.bt_start.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bt_start.BackColor = System.Drawing.Color.Transparent;
+            this.bt_start.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_start.Image = ((System.Drawing.Image)(resources.GetObject("bt_start.Image")));
             this.bt_start.ImageActive = null;
             this.bt_start.Location = new System.Drawing.Point(534, 22);
@@ -373,12 +378,29 @@
             this.answerA.Text = "answerA";
             this.answerA.UseVisualStyleBackColor = true;
             // 
+            // btn_help
+            // 
+            this.btn_help.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_help.BackColor = System.Drawing.Color.Transparent;
+            this.btn_help.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_help.Image = ((System.Drawing.Image)(resources.GetObject("btn_help.Image")));
+            this.btn_help.ImageActive = null;
+            this.btn_help.Location = new System.Drawing.Point(1079, 116);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(45, 45);
+            this.btn_help.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btn_help.TabIndex = 11;
+            this.btn_help.TabStop = false;
+            this.btn_help.Zoom = 5;
+            this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
+            // 
             // Game1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1130, 755);
+            this.Controls.Add(this.btn_help);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pn_mark);
             this.Controls.Add(this.pb_show);
@@ -395,6 +417,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_next_qt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_help)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -425,5 +448,6 @@
         private System.Windows.Forms.RadioButton answerG;
         private System.Windows.Forms.RadioButton answerF;
         private System.Windows.Forms.RadioButton answerE;
+        private Bunifu.Framework.UI.BunifuImageButton btn_help;
     }
 }

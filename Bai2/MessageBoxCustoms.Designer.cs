@@ -34,7 +34,7 @@
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.btn_ok = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.TypeMessage = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lb_noidung = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
@@ -62,6 +62,7 @@
             // 
             // btn_ok
             // 
+            this.btn_ok.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_ok.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ok.Image = ((System.Drawing.Image)(resources.GetObject("btn_ok.Image")));
             this.btn_ok.Location = new System.Drawing.Point(174, 164);
@@ -76,7 +77,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel1);
+            this.bunifuGradientPanel1.Controls.Add(this.TypeMessage);
             this.bunifuGradientPanel1.Controls.Add(this.btn_close);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.LightSteelBlue;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Transparent;
@@ -88,20 +89,21 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(522, 64);
             this.bunifuGradientPanel1.TabIndex = 27;
             // 
-            // bunifuCustomLabel1
+            // TypeMessage
             // 
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Arial", 15.75F);
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(138, 10);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(226, 39);
-            this.bunifuCustomLabel1.TabIndex = 26;
-            this.bunifuCustomLabel1.Text = "Thông Báo";
-            this.bunifuCustomLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TypeMessage.BackColor = System.Drawing.Color.Transparent;
+            this.TypeMessage.Font = new System.Drawing.Font("Arial", 15.75F);
+            this.TypeMessage.ForeColor = System.Drawing.Color.White;
+            this.TypeMessage.Location = new System.Drawing.Point(151, 8);
+            this.TypeMessage.Name = "TypeMessage";
+            this.TypeMessage.Size = new System.Drawing.Size(226, 39);
+            this.TypeMessage.TabIndex = 26;
+            this.TypeMessage.Text = "Thông Báo";
+            this.TypeMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lb_noidung
             // 
+            this.lb_noidung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lb_noidung.BackColor = System.Drawing.Color.Transparent;
             this.lb_noidung.Font = new System.Drawing.Font("Arial", 15.75F);
             this.lb_noidung.ForeColor = System.Drawing.Color.DimGray;
@@ -121,12 +123,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(525, 225);
             this.Controls.Add(this.lb_noidung);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.btn_ok);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(525, 525);
             this.Name = "MessageBoxCustoms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessageBox";
@@ -143,7 +147,7 @@
         private System.Windows.Forms.PictureBox btn_ok;
         private System.Windows.Forms.PictureBox btn_close;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel TypeMessage;
         private Bunifu.Framework.UI.BunifuCustomLabel lb_noidung;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }

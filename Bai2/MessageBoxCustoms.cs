@@ -9,6 +9,10 @@ using System.Windows.Forms;
 
 namespace Bai2
 {
+    public enum TypeMessageEnum
+    {
+        ERROR,THONGBAO,KETQUA
+    }
     public partial class MessageBoxCustoms : Form
     {
         public  MessageBoxCustoms()
@@ -18,6 +22,7 @@ namespace Bai2
                
               
         }
+
         //protected override void OnPaint(PaintEventArgs e)
         //{
         //    base.OnPaint(e);
@@ -32,6 +37,27 @@ namespace Bai2
         public MessageBoxCustoms(string noidung)
         {
             InitializeComponent();
+            lb_noidung.Text = noidung;
+            this.Paint += new PaintEventHandler(PaintBox);
+            this.ShowDialog();
+            
+        }
+          public MessageBoxCustoms(string noidung,TypeMessageEnum type)
+        {
+            InitializeComponent();
+              if(type == TypeMessageEnum.ERROR)
+              {
+                  TypeMessage.Text = "Lỗi";
+              }
+              else if (type == TypeMessageEnum.KETQUA) 
+              {
+                  TypeMessage.Text = "Kết quả";
+                  this.Size = new Size(525, 325);
+              }
+              else if (type == TypeMessageEnum.THONGBAO)
+              {
+                  TypeMessage.Text = "Thông báo";
+              }
             lb_noidung.Text = noidung;
             this.Paint += new PaintEventHandler(PaintBox);
             this.ShowDialog();

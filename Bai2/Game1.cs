@@ -314,7 +314,7 @@ namespace Bai2
            if(DemTongGiay==thietlap.timeGame)
             {
                 time.Stop();
-                MessageBox.Show("Hết giờ", "Thông báo");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Hết giờ\nSố điểm: "+Score.ToString()+"\nSố câu trả lời đúng: "+nTrue.ToString() + "\nSố câu trả lời sai: "+nFalse.ToString(), TypeMessageEnum.KETQUA);
                 
             }
             else
@@ -335,7 +335,7 @@ namespace Bai2
             TimeOfGame = thietlap.timeGame;
             if (TimeOfGame == 0)
             {
-                MessageBox.Show("Bạn chưa thiết lập dữ liệu", "THÔNG BÁO");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Bạn chưa thiết lập dữ liệu. Mời bạn nhấn nút cài đặt");
             }
             else
             {
@@ -383,7 +383,7 @@ namespace Bai2
         {
             if (GetAnswer() == "")
             {
-                MessageBox.Show("Bạn chưa chọn đáp án", "THÔNG BÁO");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Bạn chưa chọn đáp án");
             }
             else
             {
@@ -425,6 +425,11 @@ namespace Bai2
             pb_next_qt.Hide();
             TimeOfGame = 0;
             HideAnswer(); // an 4 cau E F G H
+        }
+
+        private void btn_help_Click(object sender, EventArgs e)
+        {
+            MessageBoxCustoms mess = new MessageBoxCustoms("Hướng dẫn: Chọn đáp án đúng với hình được đưa ra");
         }
     }
 }
