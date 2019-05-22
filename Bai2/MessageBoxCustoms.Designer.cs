@@ -134,6 +134,7 @@
             this.Name = "MessageBoxCustoms";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessageBox";
+            this.Load += new System.EventHandler(this.MessageBoxCustoms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);

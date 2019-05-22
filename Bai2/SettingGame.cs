@@ -11,6 +11,7 @@ namespace Bai2
 {
     public partial class SettingGame : Form
     {
+       
         protected override CreateParams CreateParams
         {
             get
@@ -49,33 +50,34 @@ namespace Bai2
         public int numberAnswers;
         public int[] Select_Unit;
         public bool CheckAllUnit;
+        public bool SoundInGame;
         private bool Check()
         {
             if (txtTime.Text == "")
             {
-                MessageBox.Show("Thời gian không có giá trị", "Lỗi");
+                MessageBoxCustoms mess =new MessageBoxCustoms("Thời gian không có giá trị", TypeMessageEnum.THONGBAO);
                 return false;
             }
             else if (textbox_start_unit.Text != "" && textbox_end_unit.Text == "")
             {
-                MessageBox.Show("Không được để trống End Unit", "Lỗi");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Không được để trống End Unit", TypeMessageEnum.THONGBAO);
                 return false;
             }
             else if (textbox_start_unit.Text == "" && textbox_end_unit.Text != "")
             {
-                MessageBox.Show("Không được để trống Start Unit", "Lỗi");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Không được để trống Start Unit", TypeMessageEnum.THONGBAO);
                 return false;
             }
             else if (textbox_start_unit.Text != "" && textbox_end_unit.Text != "")
             {
                 if (Int32.Parse(textbox_start_unit.Text) == 0)
                 {
-                    MessageBox.Show("Không được nhập Start Unit bằng 0", "Lỗi");
+                    MessageBoxCustoms mess = new MessageBoxCustoms("Không được nhập Start Unit bằng 0", TypeMessageEnum.THONGBAO);
                     return false;
                 }
                 if (Int32.Parse(textbox_end_unit.Text) <= Int32.Parse(textbox_start_unit.Text))
                 {
-                    MessageBox.Show("Start phải nhỏ hơn End", "Lỗi");
+                    MessageBoxCustoms mess = new MessageBoxCustoms("Start phải nhỏ hơn End", TypeMessageEnum.THONGBAO);
                     return false;
                 }
 
@@ -98,7 +100,7 @@ namespace Bai2
             timeGame = Int32.Parse(txtTime.Text);
             if (timeGame == 0)
             {
-                MessageBox.Show("Thời gian không được cài đặt là 0", "Lỗi");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Thời gian không được cài đặt là 0", TypeMessageEnum.THONGBAO);
                 return false;
             }
             // chon so cau hoi 4 or 8 
@@ -125,7 +127,7 @@ namespace Bai2
                 }
                 if (temp == 0 && textbox_end_unit.Text == "" && btnCheckAll.Checked == false)
                 {
-                    MessageBox.Show("Phải chọn ít nhất một Unit", "Lỗi");
+                    MessageBoxCustoms mess = new MessageBoxCustoms("Phải chọn ít nhất một Uni", TypeMessageEnum.THONGBAO);
                     return false;
                 }
                 else
@@ -148,7 +150,6 @@ namespace Bai2
                 }
             }
             return true;
-
         }
         public SettingGame()
         {
@@ -157,7 +158,7 @@ namespace Bai2
 
         private void SettingGame_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_Ok_Click(object sender, EventArgs e)
@@ -171,6 +172,18 @@ namespace Bai2
         {
             label1.Focus();
             this.Hide();
+        }
+
+        private void cb_sound_game_OnChange(object sender, EventArgs e)
+        {
+            if (cb_sound_game.Checked == true)
+            {
+                SoundInGame = true;
+            }
+            else
+            {
+                SoundInGame = false;
+            }
         }
 
       

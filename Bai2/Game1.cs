@@ -250,19 +250,38 @@ namespace Bai2
         {
             //MessageBox.Show("/" + GetAnswer() + "/");
            // MessageBox.Show("/" + TrueAnswer + "/");
-            if (GetAnswer() == TrueAnswer)
+            if (thietlap.SoundInGame == true)
             {
-                f.PlaySoundEffect("data\\true.wav");
-               // MessageBox.Show("dung");
-                Score++;
-                nTrue++;
+                if (GetAnswer() == TrueAnswer)
+                {
+                    f.PlaySoundEffect("data\\true.wav");
+                    // MessageBox.Show("dung");
+                    Score++;
+                    nTrue++;
+                }
+                else
+                {
+                    f.PlaySoundEffect("data\\false.wav");
+                    Score--;
+                    nFalse++;
+                }
+
             }
             else
             {
-                f.PlaySoundEffect("data\\false.wav");
-                Score--;
-                nFalse++;
+                if (GetAnswer() == TrueAnswer)
+                {   
+                    // MessageBox.Show("dung");
+                    Score++;
+                    nTrue++;
+                }
+                else
+                {
+                    Score--;
+                    nFalse++;
+                }
             }
+           
             lb_score.Text = Score.ToString();
             number_false.Text = nFalse.ToString();
             number_true.Text = nTrue.ToString();
@@ -429,7 +448,7 @@ namespace Bai2
 
         private void btn_help_Click(object sender, EventArgs e)
         {
-            MessageBoxCustoms mess = new MessageBoxCustoms("Hướng dẫn: Chọn đáp án đúng với hình được đưa ra");
+            MessageBoxCustoms mess = new MessageBoxCustoms("Hướng dẫn: Chọn đáp án đúng với hình được đưa ra. Bạn có thể bật tắt âm thanh ở phần cài đặt game");
         }
     }
 }
