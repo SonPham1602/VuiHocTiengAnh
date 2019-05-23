@@ -52,6 +52,7 @@
             this.answerC = new System.Windows.Forms.RadioButton();
             this.answerD = new System.Windows.Forms.RadioButton();
             this.pb_next_qt = new System.Windows.Forms.PictureBox();
+            this.btn_Help = new Bunifu.Framework.UI.BunifuImageButton();
             this.pn_mark.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bt_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_setting_game)).BeginInit();
@@ -61,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_answerB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_answerD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_next_qt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Help)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_mark
@@ -114,6 +116,7 @@
             this.bt_setting_game.TabIndex = 9;
             this.bt_setting_game.TabStop = false;
             this.bt_setting_game.Zoom = 5;
+            this.bt_setting_game.Click += new System.EventHandler(this.bt_setting_game_Click);
             // 
             // bt_start
             // 
@@ -353,11 +356,28 @@
             this.pb_next_qt.TabStop = false;
             this.pb_next_qt.Click += new System.EventHandler(this.pb_next_qt_Click);
             // 
+            // btn_Help
+            // 
+            this.btn_Help.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_Help.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Help.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Help.Image = ((System.Drawing.Image)(resources.GetObject("btn_Help.Image")));
+            this.btn_Help.ImageActive = null;
+            this.btn_Help.Location = new System.Drawing.Point(1042, 116);
+            this.btn_Help.Name = "btn_Help";
+            this.btn_Help.Size = new System.Drawing.Size(45, 45);
+            this.btn_Help.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Help.TabIndex = 11;
+            this.btn_Help.TabStop = false;
+            this.btn_Help.Zoom = 5;
+            this.btn_Help.Click += new System.EventHandler(this.btn_Help_Click);
+            // 
             // Game3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 716);
+            this.Controls.Add(this.btn_Help);
             this.Controls.Add(this.pb_next_qt);
             this.Controls.Add(this.answerD);
             this.Controls.Add(this.answerC);
@@ -383,6 +403,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_answerB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_answerD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_next_qt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Help)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +434,6 @@
         private System.Windows.Forms.RadioButton answerC;
         private System.Windows.Forms.RadioButton answerD;
         private System.Windows.Forms.PictureBox pb_next_qt;
+        private Bunifu.Framework.UI.BunifuImageButton btn_Help;
     }
 }

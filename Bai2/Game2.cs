@@ -61,8 +61,7 @@ namespace Bai2
             if (DemTongGiay == thietlap.timeGame)
             {
                 time.Stop();
-                MessageBox.Show("Hết giờ", "Thông báo");
-
+                MessageBoxCustoms mess = new MessageBoxCustoms("Hết giờ\nSố điểm: " + Score.ToString() + "\nSố câu trả lời đúng: " + nTrue.ToString() + "\nSố câu trả lời sai: " + nFalse.ToString(), TypeMessageEnum.KETQUA);
             }
             else
             {
@@ -464,7 +463,8 @@ namespace Bai2
             numberAnswer = thietlap.numberAnswers;
             if (TimeOfGame == 0)
             {
-                MessageBox.Show("Bạn chưa thiết lập dữ liệu", "THÔNG BÁO");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Bạn chưa thiết lập dữ liệu", TypeMessageEnum.THONGBAO);
+    
             }
             else
             {
@@ -562,7 +562,7 @@ namespace Bai2
         {
             if (GetAnswer() == "")
             {
-                MessageBox.Show("Bạn chưa nhập câu trẳ lời", "THÔNG BÁO");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Bạn chưa nhập câu trẳ lời", TypeMessageEnum.THONGBAO);
             }
             else
             {
@@ -673,6 +673,11 @@ namespace Bai2
             {
                 f.AudioVoice(ansF, 100, 0);
             }
+        }
+
+        private void btn_help_Click(object sender, EventArgs e)
+        {
+            MessageBoxCustoms mess = new MessageBoxCustoms("Hướng dẫn: Chọn âm thanh đúng với hình được đưa ra. Bạn có thể bật tắt âm thanh đúng/sai ở phần cài đặt game", TypeMessageEnum.THONGBAO);
         }
 
 

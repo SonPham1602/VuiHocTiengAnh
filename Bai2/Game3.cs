@@ -11,6 +11,7 @@ namespace Bai2
 {
     public partial class Game3 : Form
     {
+        SettingGame thietlap = new SettingGame();
         Dictionary dic=new Dictionary();
         int Score;
         int nTrue;
@@ -130,19 +131,36 @@ namespace Bai2
         {
             //MessageBox.Show("/" + GetAnswer() + "/");
             // MessageBox.Show("/" + TrueAnswer + "/");
-            if (GetAnswer() == TrueAnswer)
+            if (thietlap.SoundInGame == true)
             {
-                // MessageBox.Show("dung");
-                f.PlaySoundEffect("data\\true.wav");
-                Score++;
-                nTrue++;
+                if (GetAnswer() == TrueAnswer)
+                {
+                    // MessageBox.Show("dung");
+                    f.PlaySoundEffect("data\\true.wav");
+                    Score++;
+                    nTrue++;
+                }
+                else
+                {
+                    f.PlaySoundEffect("data\\false.wav");
+                    Score--;
+                    nFalse++;
+                }
             }
             else
             {
-                f.PlaySoundEffect("data\\false.wav");
-                Score--;
-                nFalse++;
-            }
+                if (GetAnswer() == TrueAnswer)
+                { 
+                    Score++;
+                    nTrue++;
+                }
+                else
+                {
+                    Score--;
+                    nFalse++;
+                }
+
+            }      
             lb_score.Text = Score.ToString();
             number_false.Text = nFalse.ToString();
             number_true.Text = nTrue.ToString();
@@ -218,7 +236,7 @@ namespace Bai2
         {
             if (GetAnswer() == "")
             {
-                MessageBox.Show("Bạn chưa nhập câu trả lời", "THÔNG BÁO");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Bạn chưa nhập câu trả lời", TypeMessageEnum.THONGBAO);
             }
             else
             {
@@ -238,6 +256,16 @@ namespace Bai2
             pb_next_qt.Hide();
             lb_word.Hide();
             HideAnswers();
+        }
+
+        private void btn_Help_Click(object sender, EventArgs e)
+        {
+            MessageBoxCustoms mess = new MessageBoxCustoms("Hướng dẫn: Chọn hình đúng với từ được đưa ra. Bạn có thể bật tắt âm thanh đúng/sai ở phần cài đặt game", TypeMessageEnum.THONGBAO);
+        }
+
+        private void bt_setting_game_Click(object sender, EventArgs e)
+        {
+            thietlap.ShowDialog();
         }
     }
 }

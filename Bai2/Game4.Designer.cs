@@ -115,6 +115,7 @@
             this.bt_setting_game.TabIndex = 9;
             this.bt_setting_game.TabStop = false;
             this.bt_setting_game.Zoom = 5;
+            this.bt_setting_game.Click += new System.EventHandler(this.bt_setting_game_Click);
             // 
             // bt_start
             // 

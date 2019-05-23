@@ -109,6 +109,14 @@ namespace Bai2
             t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
             t1.Start();
         }
+
+        private void MessageBoxCustoms_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Close();
+            }
+        }
        
     }
 }

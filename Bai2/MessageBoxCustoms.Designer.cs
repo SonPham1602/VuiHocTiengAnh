@@ -135,6 +135,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessageBox";
             this.Load += new System.EventHandler(this.MessageBoxCustoms_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MessageBoxCustoms_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);

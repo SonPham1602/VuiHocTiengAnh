@@ -255,5 +255,10 @@ namespace Bai2
             pb_next_qt.Hide();
             HideAnswers();
         }
+
+        private void bt_setting_game_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

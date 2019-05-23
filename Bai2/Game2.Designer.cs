@@ -61,6 +61,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lb_score = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_help = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pb_answerA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_answerC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_answerB)).BeginInit();
@@ -76,6 +77,7 @@
             this.pn_mark.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bt_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_setting_game)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_help)).BeginInit();
             this.SuspendLayout();
             // 
             // answerA
@@ -496,12 +498,29 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Điểm:";
             // 
+            // btn_help
+            // 
+            this.btn_help.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_help.BackColor = System.Drawing.Color.Transparent;
+            this.btn_help.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_help.Image = ((System.Drawing.Image)(resources.GetObject("btn_help.Image")));
+            this.btn_help.ImageActive = null;
+            this.btn_help.Location = new System.Drawing.Point(1057, 116);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(45, 45);
+            this.btn_help.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_help.TabIndex = 12;
+            this.btn_help.TabStop = false;
+            this.btn_help.Zoom = 5;
+            this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
+            // 
             // Game2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1114, 716);
+            this.Controls.Add(this.btn_help);
             this.Controls.Add(this.pn_mark);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pb_show);
@@ -525,6 +544,7 @@
             this.pn_mark.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bt_exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_setting_game)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_help)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -563,5 +583,6 @@
         private System.Windows.Forms.PictureBox pb_answerE;
         private System.Windows.Forms.RadioButton answerF;
         private System.Windows.Forms.RadioButton answerE;
+        private Bunifu.Framework.UI.BunifuImageButton btn_help;
     }
 }

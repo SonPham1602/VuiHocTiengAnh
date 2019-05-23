@@ -29,29 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search));
-            this.tb_search = new Bunifu.Framework.UI.BunifuTextbox();
             this.hienthianh = new System.Windows.Forms.PictureBox();
+            this.textbox_search = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.btn_help = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lb_unit_name = new System.Windows.Forms.Label();
+            this.lb_mean_word = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hienthianh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_help)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tb_search
-            // 
-            this.tb_search.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tb_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(241)))));
-            this.tb_search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tb_search.BackgroundImage")));
-            this.tb_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tb_search.ForeColor = System.Drawing.Color.SeaGreen;
-            this.tb_search.Icon = ((System.Drawing.Image)(resources.GetObject("tb_search.Icon")));
-            this.tb_search.Location = new System.Drawing.Point(357, 33);
-            this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(409, 55);
-            this.tb_search.TabIndex = 3;
-            this.tb_search.text = "";
-            this.tb_search.KeyPress += new System.EventHandler(this.tb_search_KeyPress);
             // 
             // hienthianh
             // 
-            this.hienthianh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.hienthianh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.hienthianh.Location = new System.Drawing.Point(238, 94);
             this.hienthianh.Name = "hienthianh";
             this.hienthianh.Size = new System.Drawing.Size(703, 593);
@@ -59,25 +50,93 @@
             this.hienthianh.TabIndex = 3;
             this.hienthianh.TabStop = false;
             // 
+            // textbox_search
+            // 
+            this.textbox_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textbox_search.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textbox_search.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textbox_search.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textbox_search.BorderThickness = 2;
+            this.textbox_search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textbox_search.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textbox_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textbox_search.isPassword = false;
+            this.textbox_search.Location = new System.Drawing.Point(238, 33);
+            this.textbox_search.Margin = new System.Windows.Forms.Padding(4);
+            this.textbox_search.Name = "textbox_search";
+            this.textbox_search.Size = new System.Drawing.Size(703, 44);
+            this.textbox_search.TabIndex = 4;
+            this.textbox_search.Text = "Write The Word";
+            this.textbox_search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textbox_search.Click += new System.EventHandler(this.textbox_search_Click);
+            this.textbox_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox_search_KeyDown);
+            // 
+            // btn_help
+            // 
+            this.btn_help.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_help.BackColor = System.Drawing.Color.Transparent;
+            this.btn_help.Image = ((System.Drawing.Image)(resources.GetObject("btn_help.Image")));
+            this.btn_help.ImageActive = null;
+            this.btn_help.Location = new System.Drawing.Point(1089, 12);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(45, 45);
+            this.btn_help.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_help.TabIndex = 5;
+            this.btn_help.TabStop = false;
+            this.btn_help.Zoom = 10;
+            this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
+            // 
+            // lb_unit_name
+            // 
+            this.lb_unit_name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_unit_name.Font = new System.Drawing.Font("Circle", 14.25F, System.Drawing.FontStyle.Italic);
+            this.lb_unit_name.Location = new System.Drawing.Point(238, 754);
+            this.lb_unit_name.Name = "lb_unit_name";
+            this.lb_unit_name.Size = new System.Drawing.Size(703, 31);
+            this.lb_unit_name.TabIndex = 10;
+            this.lb_unit_name.Text = "label1";
+            this.lb_unit_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lb_mean_word
+            // 
+            this.lb_mean_word.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_mean_word.Font = new System.Drawing.Font("Circle", 14.25F, System.Drawing.FontStyle.Italic);
+            this.lb_mean_word.Location = new System.Drawing.Point(238, 709);
+            this.lb_mean_word.Name = "lb_mean_word";
+            this.lb_mean_word.Size = new System.Drawing.Size(703, 31);
+            this.lb_mean_word.TabIndex = 11;
+            this.lb_mean_word.Text = "label1";
+            this.lb_mean_word.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1146, 794);
+            this.Controls.Add(this.lb_mean_word);
+            this.Controls.Add(this.lb_unit_name);
+            this.Controls.Add(this.btn_help);
+            this.Controls.Add(this.textbox_search);
             this.Controls.Add(this.hienthianh);
-            this.Controls.Add(this.tb_search);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Search";
             this.Text = "Search";
             ((System.ComponentModel.ISupportInitialize)(this.hienthianh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_help)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuTextbox tb_search;
         private System.Windows.Forms.PictureBox hienthianh;
+        private Bunifu.Framework.UI.BunifuMetroTextbox textbox_search;
+        private Bunifu.Framework.UI.BunifuImageButton btn_help;
+        private System.Windows.Forms.Label lb_unit_name;
+        private System.Windows.Forms.Label lb_mean_word;
     }
 }

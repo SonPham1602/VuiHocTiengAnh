@@ -90,7 +90,7 @@ namespace Bai2
             }
             else
             {
-                MessageBox.Show("Chưa chọn bài học", "THÔNG BÁO");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Chưa chọn bài chọn",TypeMessageEnum.THONGBAO);
             }
            
 
@@ -134,7 +134,8 @@ namespace Bai2
             }
             else
             {
-                MessageBox.Show("Chưa chọn bài học", "THÔNG BÁO");
+                 MessageBoxCustoms mess = new MessageBoxCustoms("Chưa chọn bài học",TypeMessageEnum.THONGBAO);
+              
             }
              
         }
@@ -156,7 +157,7 @@ namespace Bai2
             }
             else
             {
-                MessageBox.Show("Chưa chọn bài học", "THÔNG BÁO");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Chưa chọn bài học", TypeMessageEnum.THONGBAO);
             }
         }
         int GetUnitNumber(string str)

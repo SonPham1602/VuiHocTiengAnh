@@ -35,6 +35,7 @@ namespace Bai2
         {
             NameUnit = str;
         }
+       
         public void setOrdinalNumbers(int n)
         {
             OrdinalNumbers = n;
@@ -472,6 +473,21 @@ namespace Bai2
                 }
             }
             return Result;
+        }
+        public Word FindAnyWord(string str)
+        {
+            Word Result = new Word();
+            Result = null;
+            for (int i = 0; i < DSWord.Count; i++)
+            {
+                if (DSWord[i].tu.Contains(str) == true)
+                {
+                    Result = DSWord[i];
+                    break;
+                }
+            }
+            return Result;
+               
         }
         public int getNumberList()
         {

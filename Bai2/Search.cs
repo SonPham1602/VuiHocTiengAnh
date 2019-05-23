@@ -11,34 +11,51 @@ namespace Bai2
 {
     public partial class Search : Form
     {
+        
         Dictionary dic=new Dictionary();
         public Search()
         {
             InitializeComponent();
-            tb_search.text = "";
+            lb_unit_name.Hide();
+            lb_mean_word.Hide();
+          
         }
 
-        private void tb_search_KeyPress(object sender, EventArgs e)
+ 
+
+        private void textbox_search_KeyDown(object sender, KeyEventArgs e)
         {
-            KeyPressEventArgs k = e as KeyPressEventArgs;
-            if (k != null)
+            if (e.KeyCode == Keys.Enter)
             {
-                if (k.KeyChar == 13)
+                lb_unit_name.Show();
+                lb_mean_word.Show();
+                if (dic.FindAnyWord(textbox_search.Text) != null)
                 {
-                   
-                    if (dic.FindWord(tb_search.text) != null)
-                    {
-                        hienthianh.Image = dic.FindWord(tb_search.text).getAnh();                                            
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không tìm thấy từ yêu cầu", "THÔNG BÁO");
-                    }
-                    tb_search.text = ""; 
-                                    
+                    Word result = dic.FindAnyWord(textbox_search.Text);
+                    hienthianh.Image = result.getAnh();
+                    lb_unit_name.Text = dic.GetNameOfUnitByNumber(result.NameUnit).Replace("_"," ");
+                    lb_mean_word.Text = result.GetMeanWord().Replace("_"," ");
                 }
+                else
+                {
+                    MessageBoxCustoms mess = new MessageBoxCustoms("Không tìm thấy từ yêu cầu", TypeMessageEnum.THONGBAO);
+                }
+                textbox_search.ResetText();
+               
             }
-           
         }
+
+        private void textbox_search_Click(object sender, EventArgs e)
+        {
+            textbox_search.ResetText();
+        }
+
+        private void btn_help_Click(object sender, EventArgs e)
+        {
+            MessageBoxCustoms mess = new MessageBoxCustoms("Nhận từ cần tìm kiếm vào ô\nLưu ý nên nhập đúng và đầy đủ từ", TypeMessageEnum.THONGBAO);
+        }
+
+       
+       
     }
 }
