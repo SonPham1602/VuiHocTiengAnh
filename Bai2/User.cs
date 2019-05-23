@@ -474,19 +474,20 @@ namespace Bai2
             }
             return Result;
         }
-        public Word FindAnyWord(string str)
+        public List<Word> FindAnyWord(string str)
         {
+            List<Word> ketqua = new List<Word>();
             Word Result = new Word();
             Result = null;
             for (int i = 0; i < DSWord.Count; i++)
             {
                 if (DSWord[i].tu.Contains(str) == true)
                 {
-                    Result = DSWord[i];
-                    break;
+                    ketqua.Add(DSWord[i]);
+               
                 }
             }
-            return Result;
+            return ketqua;
                
         }
         public int getNumberList()
