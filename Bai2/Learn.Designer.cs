@@ -47,6 +47,7 @@
             this.speed_voice = new System.Windows.Forms.TrackBar();
             this.pb_reset = new System.Windows.Forms.PictureBox();
             this.pb_mark = new System.Windows.Forms.PictureBox();
+            this.btn_help = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pb_back)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_audio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_next)).BeginInit();
@@ -56,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.speed_voice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_reset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_mark)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_help)).BeginInit();
             this.SuspendLayout();
             // 
             // pb_back
@@ -297,13 +299,29 @@
             // 
             // pb_mark
             // 
-            this.pb_mark.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_mark.Image = global::Bai2.Properties.Resources.star1;
             this.pb_mark.Location = new System.Drawing.Point(949, 613);
             this.pb_mark.Name = "pb_mark";
             this.pb_mark.Size = new System.Drawing.Size(50, 50);
             this.pb_mark.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_mark.TabIndex = 17;
             this.pb_mark.TabStop = false;
+            this.pb_mark.Click += new System.EventHandler(this.pb_mark_Click);
+            // 
+            // btn_help
+            // 
+            this.btn_help.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_help.BackColor = System.Drawing.Color.Transparent;
+            this.btn_help.Image = ((System.Drawing.Image)(resources.GetObject("btn_help.Image")));
+            this.btn_help.ImageActive = null;
+            this.btn_help.Location = new System.Drawing.Point(1089, 12);
+            this.btn_help.Name = "btn_help";
+            this.btn_help.Size = new System.Drawing.Size(45, 45);
+            this.btn_help.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_help.TabIndex = 18;
+            this.btn_help.TabStop = false;
+            this.btn_help.Zoom = 10;
+            this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
             // 
             // Learn
             // 
@@ -311,6 +329,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1146, 794);
+            this.Controls.Add(this.btn_help);
             this.Controls.Add(this.pb_mark);
             this.Controls.Add(this.select_unit);
             this.Controls.Add(this.pb_reset);
@@ -336,6 +355,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.speed_voice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_reset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_mark)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_help)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,5 +380,6 @@
         private System.Windows.Forms.TrackBar speed_voice;
         private System.Windows.Forms.PictureBox pb_reset;
         private System.Windows.Forms.PictureBox pb_mark;
+        private Bunifu.Framework.UI.BunifuImageButton btn_help;
     }
 }

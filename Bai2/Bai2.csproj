@@ -356,6 +356,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="icon\star1.png" />
+    <None Include="icon\star.png" />
     <None Include="file_text\Unit_21_AtTheBirdPark.txt" />
     <None Include="file_text\Unit_20_AtTheShoppingCentre.txt" />
     <None Include="file_text\Unit_19_AtTheSupermarket.txt" />
@@ -378,9 +380,7 @@
     <None Include="file_text\Unit_2_Let%27sGetDressed.txt" />
     <None Include="file_text\Unit_1_It%27sTimeToWakeUp.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="icon\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>

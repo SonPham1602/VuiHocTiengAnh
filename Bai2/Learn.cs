@@ -194,5 +194,15 @@ namespace Bai2
 
         }
 
+        private void btn_help_Click(object sender, EventArgs e)
+        {
+            MessageBoxCustoms mess = new MessageBoxCustoms("Chọn Unit cần học ở thanh bên trái. Bạn có thể lưu những từ vựng cần chú ý bằng cách đánh dấu sao", TypeMessageEnum.THONGBAO);
+        }
+
+        private void pb_mark_Click(object sender, EventArgs e)
+        {
+            pb_mark.Image = Properties.Resources.star;
+        }
+
     }
 }

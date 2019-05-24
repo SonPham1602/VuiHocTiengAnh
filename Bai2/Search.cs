@@ -109,11 +109,8 @@ namespace Bai2
                 lb_search_result.Text = (pos + 1).ToString()+"/" + result.Count.ToString();
                 hienthianh.Image = result[pos].getAnh();
                 lb_unit_name.Text = dic.GetNameOfUnitByNumber(result[pos].NameUnit).Replace("_", " ");
-                lb_mean_word.Text = result[pos].GetMeanWord().Replace("_", " ");
-            
-            
+                lb_mean_word.Text = result[pos].GetMeanWord().Replace("_", " ");        
         }
-
        
        
     }

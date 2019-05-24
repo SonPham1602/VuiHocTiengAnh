@@ -97,7 +97,10 @@ namespace Bai2
 
 
     }// class word
-
+    public enum TypeUpdateUnit
+    {
+        CREATE,DELETE,CHANGE
+    }
     public class Dictionary
     {
 
@@ -144,12 +147,23 @@ namespace Bai2
         /// Ham dung de them mot unit vao trong data
         /// </summary>
         /// <param name="nameUnit"> Name of Unit Which U want to Add </param>
-        public void AddNewUnit(string nameUnit)
+        public void AddNewUnit(string nameUnit,string content)
         {
             using (StreamWriter w = File.AppendText(@"data\data.txt"))
             {
                 w.WriteLine(nameUnit);
+                string path = @"data\"+nameUnit+".txt";
+                if(content == String.Empty)
+                {
+                    File.Create(path);
+                }
+                else
+                {
+                    File.WriteAllText(path, content);
+                }
+                
             }
+
         }
         /// <summary>
         /// Ham dung de xoa unit trong dictionnary
@@ -160,6 +174,34 @@ namespace Bai2
             string contents = File.ReadAllText(@"data\data.txt");// noi dung
             contents = contents.Replace(NameUnit+"\n","");
             File.WriteAllText(@"data\data.txt", contents);
+           
+        }
+        /// <summary>
+        /// Update Word in Unit 
+        /// 
+        /// </summary>
+        /// <param name="NameUnit"> Name of Unit which you need to update</param>
+        public void UpdateUnit(string NameUnit,TypeUpdateUnit type)
+        {
+            if (type == TypeUpdateUnit.CREATE)
+            {
+                using (StreamWriter w = File.AppendText(@"data\"+NameUnit+".txt"))
+                {
+                    
+                }
+            }
+            else if (type == TypeUpdateUnit.CHANGE)
+            {
+
+            }
+            else if (type == TypeUpdateUnit.DELETE)
+            {
+
+            }
+        }
+        public void ReadUnit(string NameUnit)
+        {
+
         }
         public bool OpenFileAndLoad(string path, int nameunit)
         {

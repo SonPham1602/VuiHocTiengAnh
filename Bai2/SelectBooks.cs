@@ -15,5 +15,20 @@ namespace Bai2
         {
             InitializeComponent();
         }
+
+        private void btn_right_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_left_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_select_book_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

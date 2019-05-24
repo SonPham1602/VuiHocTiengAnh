@@ -29,56 +29,82 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectBooks));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.btn_select_book = new System.Windows.Forms.PictureBox();
+            this.btn_left = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_right = new Bunifu.Framework.UI.BunifuImageButton();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_select_book)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_left)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_right)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(58, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 404);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(530, 67);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(297, 404);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(358, 19);
+            this.label1.Location = new System.Drawing.Point(469, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Select Book";
             // 
+            // btn_select_book
+            // 
+            this.btn_select_book.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_select_book.Image = ((System.Drawing.Image)(resources.GetObject("btn_select_book.Image")));
+            this.btn_select_book.Location = new System.Drawing.Point(346, 104);
+            this.btn_select_book.Name = "btn_select_book";
+            this.btn_select_book.Size = new System.Drawing.Size(423, 549);
+            this.btn_select_book.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_select_book.TabIndex = 0;
+            this.btn_select_book.TabStop = false;
+            this.btn_select_book.Click += new System.EventHandler(this.btn_select_book_Click);
+            // 
+            // btn_left
+            // 
+            this.btn_left.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_left.BackColor = System.Drawing.Color.Transparent;
+            this.btn_left.Image = ((System.Drawing.Image)(resources.GetObject("btn_left.Image")));
+            this.btn_left.ImageActive = null;
+            this.btn_left.Location = new System.Drawing.Point(32, 322);
+            this.btn_left.Name = "btn_left";
+            this.btn_left.Size = new System.Drawing.Size(60, 60);
+            this.btn_left.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_left.TabIndex = 15;
+            this.btn_left.TabStop = false;
+            this.btn_left.Zoom = 10;
+            this.btn_left.Click += new System.EventHandler(this.btn_left_Click);
+            // 
+            // btn_right
+            // 
+            this.btn_right.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_right.BackColor = System.Drawing.Color.Transparent;
+            this.btn_right.Image = ((System.Drawing.Image)(resources.GetObject("btn_right.Image")));
+            this.btn_right.ImageActive = null;
+            this.btn_right.Location = new System.Drawing.Point(1023, 334);
+            this.btn_right.Name = "btn_right";
+            this.btn_right.Size = new System.Drawing.Size(60, 60);
+            this.btn_right.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_right.TabIndex = 14;
+            this.btn_right.TabStop = false;
+            this.btn_right.Zoom = 10;
+            this.btn_right.Click += new System.EventHandler(this.btn_right_Click);
+            // 
             // SelectBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 606);
+            this.ClientSize = new System.Drawing.Size(1114, 716);
+            this.Controls.Add(this.btn_left);
+            this.Controls.Add(this.btn_right);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btn_select_book);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SelectBooks";
             this.Text = "SelectBooks";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_select_book)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_left)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_right)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,8 +112,9 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox btn_select_book;
+        private Bunifu.Framework.UI.BunifuImageButton btn_left;
+        private Bunifu.Framework.UI.BunifuImageButton btn_right;
     }
 }
