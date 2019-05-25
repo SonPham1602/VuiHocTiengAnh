@@ -167,5 +167,15 @@ namespace Bai2
             toolTip.SetToolTip(this.lb_name_user, "Thay đổi tên");
             toolTip.SetToolTip(this.change_background, "Thay đổi ảnh bìa");
         }
+
+        private void btn_help_Click(object sender, EventArgs e)
+        {
+            MessageBoxCustoms mess = new MessageBoxCustoms("Bạn có thể thay đổi ảnh đại diện,tên,câu châm ngôn, hình nền của mình bằng cách nhấn vào chính nó", TypeMessageEnum.THONGBAO);
+        }
+
+        private void lb_cau_cham_ngon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

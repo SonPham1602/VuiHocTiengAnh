@@ -500,7 +500,7 @@
             // 
             // btn_help
             // 
-            this.btn_help.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_help.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_help.BackColor = System.Drawing.Color.Transparent;
             this.btn_help.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_help.Image = ((System.Drawing.Image)(resources.GetObject("btn_help.Image")));

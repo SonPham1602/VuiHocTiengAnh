@@ -299,6 +299,7 @@
             // 
             // pb_mark
             // 
+            this.pb_mark.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_mark.Image = global::Bai2.Properties.Resources.star1;
             this.pb_mark.Location = new System.Drawing.Point(949, 613);
             this.pb_mark.Name = "pb_mark";

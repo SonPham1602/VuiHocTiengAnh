@@ -13,6 +13,7 @@ namespace Bai2
 {
     public partial class Learn : Form
     {
+        private bool MarkWord;
         public void SetDefault()// ham set tat ca trag thai font label ve kich thuoc mac dinh
         {
             Font f = new Font("Circle", 14.25F, FontStyle.Italic);
@@ -201,7 +202,16 @@ namespace Bai2
 
         private void pb_mark_Click(object sender, EventArgs e)
         {
-            pb_mark.Image = Properties.Resources.star;
+            MarkWord = !MarkWord;
+            if (MarkWord==true)
+            {
+                pb_mark.Image = Properties.Resources.star;
+            }
+            else
+            {
+                pb_mark.Image = Properties.Resources.star1;
+            }
+            
         }
 
     }

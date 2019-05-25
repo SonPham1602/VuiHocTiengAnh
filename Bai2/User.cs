@@ -763,6 +763,10 @@ namespace Bai2
             F_Answers3 = getImageWordByNumber(n3);
         }
     }// class tu dien
+    public class Book 
+    {
+        
+    }
     public delegate void EventSuccess(object sender, ChangeUI e);
 
     public class ChangeUI : EventArgs
@@ -1235,12 +1239,25 @@ namespace Bai2
             SoundPlayer sound = new SoundPlayer(path);
             sound.PlaySync();
         }
-
-
-
     }
     public class HistoryUse
     {
         
+    }
+    public class ProfileUser
+    {
+        public string ChamNgon; // Cau noi tao dong luc
+        public string TimeOpen;// Time of open application
+        public int SoLanMoChuongTrinh;// So lan mo chuong trinh
+        public int SoLanChoiGame;// so luong gan choi game
+        public int DiemCaoNhatDatDuocGame1;
+        public int DiemCaoNhatDatDuocGame2;
+        public int DiemCaoNhatDatDuocGame3;
+        public int DiemCaoNhatDatDuocGame4;
+        public int DiemCaoNhatDatDuocGame5;
+        public int DiemCaoNhatDatDuocGame6;
+        public int SoLanLamTest;
+
+
     }
 }
