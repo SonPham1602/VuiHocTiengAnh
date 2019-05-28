@@ -34,6 +34,7 @@ namespace Bai2
                
                 if (dic.FindAnyWord(textbox_search.Text).Count!= 0)
                 {
+                    hienthianh.Show();
                     lb_search_result.Show();
                     lb_unit_name.Show();
                     lb_mean_word.Show();
@@ -56,6 +57,7 @@ namespace Bai2
                 }
                 else
                 {
+                    hienthianh.Hide();
                     btn_right.Hide();
                     btn_left.Hide();
                     lb_search_result.Hide();

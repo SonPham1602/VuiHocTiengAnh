@@ -468,6 +468,7 @@ namespace Bai2
             }
             else
             {
+                ProfileUser.SoLanChoiGame++;
                 Score = 0;
                 nTrue = 0;
                 nFalse = 0;

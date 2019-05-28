@@ -137,7 +137,8 @@ namespace Bai2
             InitializeComponent();
             this.Opacity = 0;
             timer_FadeIn.Start();// tao hieu ung fade in 
-          
+            ProfileUser.ReadData();
+            ProfileUser.SoLanMoChuongTrinh++;
           
            //this.StartPosition = FormStartPosition.CenterScreen;
             //"name of control".Cursor = new System.Windows.Forms.Cursor(Properties.Resources."name of image".Handle);
@@ -204,7 +205,7 @@ namespace Bai2
             home.Dock = DockStyle.Fill;
             home.Show();
             home.BringToFront();
-           
+            
           
            // this.Show();
             //this.ChangeColorBar(Color.FromArgb());
@@ -213,6 +214,7 @@ namespace Bai2
             
             
         }
+       
       
         private void label4_Click(object sender, EventArgs e)
         {
@@ -483,6 +485,11 @@ namespace Bai2
             toolTip.SetToolTip(this.bt_data, "Thẻ Dữ Liệu Chương Trình");
             
 
+        }
+
+        private void Mainform_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ProfileUser.SaveData();
         }
     }
     

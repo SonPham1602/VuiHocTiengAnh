@@ -167,6 +167,7 @@ namespace Bai2
         }
         private void bt_start_Click(object sender, EventArgs e)
         {
+            ProfileUser.SoLanChoiGame++;
             Score = 0;
             nTrue = 0;
             nFalse = 0;

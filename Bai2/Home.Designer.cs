@@ -36,13 +36,17 @@
             this.lb_name_user = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lb_open_time = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lb_cau_cham_ngon = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_help = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lb_playgame_time = new System.Windows.Forms.Label();
+            this.lb_do_test = new System.Windows.Forms.Label();
+            this.lb_high_score_test = new System.Windows.Forms.Label();
+            this.lb_high_score_game = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cover_avatar)).BeginInit();
             this.panel_background.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.change_background)).BeginInit();
@@ -127,19 +131,19 @@
             this.label2.Text = "Open Time:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
+            // lb_open_time
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Aachen", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(162, 520);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 29);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Open Time";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lb_open_time.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lb_open_time.BackColor = System.Drawing.Color.Transparent;
+            this.lb_open_time.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_open_time.Font = new System.Drawing.Font("Aachen", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_open_time.ForeColor = System.Drawing.Color.DimGray;
+            this.lb_open_time.Location = new System.Drawing.Point(210, 522);
+            this.lb_open_time.Name = "lb_open_time";
+            this.lb_open_time.Size = new System.Drawing.Size(130, 29);
+            this.lb_open_time.TabIndex = 8;
+            this.lb_open_time.Text = "Open Time";
+            this.lb_open_time.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
             // 
@@ -177,7 +181,7 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Aachen", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(12, 615);
+            this.label5.Location = new System.Drawing.Point(12, 612);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 29);
             this.label5.TabIndex = 10;
@@ -191,7 +195,7 @@
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Aachen", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(12, 655);
+            this.label6.Location = new System.Drawing.Point(12, 657);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(192, 29);
             this.label6.TabIndex = 11;
@@ -227,18 +231,78 @@
             this.btn_help.Zoom = 10;
             this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
             // 
+            // lb_playgame_time
+            // 
+            this.lb_playgame_time.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lb_playgame_time.BackColor = System.Drawing.Color.Transparent;
+            this.lb_playgame_time.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_playgame_time.Font = new System.Drawing.Font("Aachen", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_playgame_time.ForeColor = System.Drawing.Color.DimGray;
+            this.lb_playgame_time.Location = new System.Drawing.Point(210, 571);
+            this.lb_playgame_time.Name = "lb_playgame_time";
+            this.lb_playgame_time.Size = new System.Drawing.Size(130, 29);
+            this.lb_playgame_time.TabIndex = 14;
+            this.lb_playgame_time.Text = "Open Time";
+            this.lb_playgame_time.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lb_do_test
+            // 
+            this.lb_do_test.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lb_do_test.BackColor = System.Drawing.Color.Transparent;
+            this.lb_do_test.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_do_test.Font = new System.Drawing.Font("Aachen", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_do_test.ForeColor = System.Drawing.Color.DimGray;
+            this.lb_do_test.Location = new System.Drawing.Point(210, 614);
+            this.lb_do_test.Name = "lb_do_test";
+            this.lb_do_test.Size = new System.Drawing.Size(130, 29);
+            this.lb_do_test.TabIndex = 15;
+            this.lb_do_test.Text = "Open Time";
+            this.lb_do_test.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lb_high_score_test
+            // 
+            this.lb_high_score_test.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lb_high_score_test.BackColor = System.Drawing.Color.Transparent;
+            this.lb_high_score_test.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_high_score_test.Font = new System.Drawing.Font("Aachen", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_high_score_test.ForeColor = System.Drawing.Color.DimGray;
+            this.lb_high_score_test.Location = new System.Drawing.Point(210, 657);
+            this.lb_high_score_test.Name = "lb_high_score_test";
+            this.lb_high_score_test.Size = new System.Drawing.Size(130, 29);
+            this.lb_high_score_test.TabIndex = 16;
+            this.lb_high_score_test.Text = "Open Time";
+            this.lb_high_score_test.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lb_high_score_game
+            // 
+            this.lb_high_score_game.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lb_high_score_game.BackColor = System.Drawing.Color.Transparent;
+            this.lb_high_score_game.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lb_high_score_game.Font = new System.Drawing.Font("Aachen", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_high_score_game.ForeColor = System.Drawing.Color.DimGray;
+            this.lb_high_score_game.Location = new System.Drawing.Point(210, 695);
+            this.lb_high_score_game.Name = "lb_high_score_game";
+            this.lb_high_score_game.Size = new System.Drawing.Size(130, 29);
+            this.lb_high_score_game.TabIndex = 17;
+            this.lb_high_score_game.Text = "Open Time";
+            this.lb_high_score_game.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1130, 755);
+            this.Controls.Add(this.lb_high_score_game);
+            this.Controls.Add(this.lb_high_score_test);
+            this.Controls.Add(this.lb_do_test);
+            this.Controls.Add(this.lb_playgame_time);
             this.Controls.Add(this.btn_help);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lb_open_time);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lb_cau_cham_ngon);
             this.Controls.Add(this.panel_background);
@@ -262,12 +326,16 @@
         private System.Windows.Forms.PictureBox change_background;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lb_open_time;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lb_cau_cham_ngon;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuImageButton btn_help;
+        private System.Windows.Forms.Label lb_playgame_time;
+        private System.Windows.Forms.Label lb_do_test;
+        private System.Windows.Forms.Label lb_high_score_test;
+        private System.Windows.Forms.Label lb_high_score_game;
     }
 }

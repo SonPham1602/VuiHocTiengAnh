@@ -1244,19 +1244,71 @@ namespace Bai2
     {
         
     }
-    public class ProfileUser
+    public static class ProfileUser
     {
-        public string ChamNgon; // Cau noi tao dong luc
-        public string TimeOpen;// Time of open application
-        public int SoLanMoChuongTrinh;// So lan mo chuong trinh
-        public int SoLanChoiGame;// so luong gan choi game
-        public int DiemCaoNhatDatDuocGame1;
-        public int DiemCaoNhatDatDuocGame2;
-        public int DiemCaoNhatDatDuocGame3;
-        public int DiemCaoNhatDatDuocGame4;
-        public int DiemCaoNhatDatDuocGame5;
-        public int DiemCaoNhatDatDuocGame6;
-        public int SoLanLamTest;
+        public static string ChamNgon =""; // Cau noi tao dong luc
+        public static string TimeOpen="";// Time of open application
+        public static int SoLanMoChuongTrinh=0;// So lan mo chuong trinh
+        public static int SoLanChoiGame=0;// so luong gan choi game
+        public static int DiemCaoNhatDatDuocGame=0;
+        public static int SoLanLamTest=0;
+        //Function
+
+        /// <summary>
+        /// Ham dung de Doc du lieu ban dau 
+        /// Neu ko co: tao moi
+        /// Neu co r : Doc du lieu
+        /// </summary>
+        public  static void ReadData()
+        {
+            
+            try
+            {
+                List<string> Result=new List<string>();
+                var fileBytes = File.ReadLines("user_data\\History.dat");
+                foreach (var line in fileBytes)
+                {
+                    Result.Add(line);
+
+                }
+         
+                ChamNgon = Result[0];
+                TimeOpen = Result[1];
+                SoLanMoChuongTrinh = Int32.Parse(Result[2]);
+                SoLanChoiGame = Int32.Parse(Result[3]);
+                DiemCaoNhatDatDuocGame = Int32.Parse(Result[4]);
+                SoLanLamTest = Int32.Parse(Result[5]);
+                MessageBox.Show(SoLanMoChuongTrinh.ToString());
+                
+
+             
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine(e.Message + "\n Cannot read from file.");
+            }
+          
+
+           
+        }
+        public static void SaveData()
+        {
+            string HistoryData = ChamNgon + "\n" + TimeOpen + "\n" + SoLanMoChuongTrinh.ToString() + "\n" +SoLanChoiGame.ToString() + "\n" + DiemCaoNhatDatDuocGame.ToString() + "\n" + SoLanLamTest.ToString();
+            try
+            {
+                string s = "user_data" + "\\History.dat";
+      
+                File.WriteAllText(s, HistoryData, Encoding.UTF8);
+                //MessageBox.Show("Successful");
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show(e.Message + "\n Cannot create file.");
+                return;
+            }
+           
+        }
+      
 
 
     }

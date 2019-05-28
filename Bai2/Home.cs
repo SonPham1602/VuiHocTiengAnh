@@ -31,6 +31,7 @@ namespace Bai2
         {         
             InitializeComponent();
             SetToolTips();
+           
         }
 
  
@@ -139,6 +140,7 @@ namespace Bai2
             {
                 panel_background.BackgroundImage = f.OpenImageData("background");
             }
+            SetProfileUser();
         }
 
         ChangeText change ;// thay doi ten
@@ -176,6 +178,10 @@ namespace Bai2
         private void lb_cau_cham_ngon_Click(object sender, EventArgs e)
         {
 
+        }
+        private void SetProfileUser()
+        {
+            lb_open_time.Text = ProfileUser.SoLanMoChuongTrinh.ToString();
         }
     }
 }
