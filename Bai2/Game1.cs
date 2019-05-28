@@ -358,6 +358,7 @@ namespace Bai2
             }
             else
             {
+
                 ProfileUser.SoLanChoiGame++;
                 DemGiay = 0;
                 DemPhut = 0;

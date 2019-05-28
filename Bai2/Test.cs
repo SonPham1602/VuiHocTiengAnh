@@ -199,6 +199,7 @@ namespace Bai2
                 DemTongGiay = 0;
                 SoCauDung = 0;
                 SoCauSai = 0;
+                ProfileUser.SoLanLamTest++;
                 if (thietlap.Test_Mode == "Random")
                 {
                     arrayListWord = new int[thietlap.amountquestion * thietlap.Select_Unit.Length];

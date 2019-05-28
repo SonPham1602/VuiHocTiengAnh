@@ -1259,6 +1259,7 @@ namespace Bai2
         /// Neu ko co: tao moi
         /// Neu co r : Doc du lieu
         /// </summary>
+
         public  static void ReadData()
         {
             
@@ -1278,7 +1279,7 @@ namespace Bai2
                 SoLanChoiGame = Int32.Parse(Result[3]);
                 DiemCaoNhatDatDuocGame = Int32.Parse(Result[4]);
                 SoLanLamTest = Int32.Parse(Result[5]);
-                MessageBox.Show(SoLanMoChuongTrinh.ToString());
+               // MessageBox.Show(SoLanMoChuongTrinh.ToString());
                 
 
              
@@ -1307,6 +1308,12 @@ namespace Bai2
                 return;
             }
            
+        }
+        public static string CalulateTime()
+        {
+            string result = "";
+            DateTime d = DateTime.Now;
+            return result;
         }
       
 

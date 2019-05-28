@@ -182,6 +182,8 @@ namespace Bai2
         private void SetProfileUser()
         {
             lb_open_time.Text = ProfileUser.SoLanMoChuongTrinh.ToString();
+            lb_do_test.Text = ProfileUser.SoLanLamTest.ToString();
+            lb_playgame_time.Text = ProfileUser.SoLanChoiGame.ToString();
         }
     }
 }
