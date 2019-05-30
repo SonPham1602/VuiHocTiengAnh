@@ -110,7 +110,7 @@ namespace Bai2
         
         // thuoc tinh chuong trinh
         Size CurrentSizeForm= new Size();
-        Home home=new Home();
+        static Home home=new Home();
         Learn learn= new Learn();
         Test test =new Test();
         Setting setting=new Setting();

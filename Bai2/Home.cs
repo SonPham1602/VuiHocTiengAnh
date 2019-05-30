@@ -177,13 +177,15 @@ namespace Bai2
 
         private void lb_cau_cham_ngon_Click(object sender, EventArgs e)
         {
-
+            ChangeText changetext = new ChangeText(lb_cau_cham_ngon.Text, 1);
+            changetext.ShowDialog();
         }
-        private void SetProfileUser()
+        public void SetProfileUser()
         {
             lb_open_time.Text = ProfileUser.SoLanMoChuongTrinh.ToString();
             lb_do_test.Text = ProfileUser.SoLanLamTest.ToString();
             lb_playgame_time.Text = ProfileUser.SoLanChoiGame.ToString();
+            lb_cau_cham_ngon.Text = ProfileUser.ChamNgon;
         }
     }
 }

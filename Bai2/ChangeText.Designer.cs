@@ -39,6 +39,7 @@
             // 
             // tb_change_name
             // 
+            this.tb_change_name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_change_name.CausesValidation = false;
             this.tb_change_name.Font = new System.Drawing.Font("Aachen", 14.25F, System.Drawing.FontStyle.Bold);
             this.tb_change_name.Location = new System.Drawing.Point(39, 37);
@@ -54,6 +55,7 @@
             this.bt_Ok.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.bt_Ok.ActiveForecolor = System.Drawing.Color.White;
             this.bt_Ok.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bt_Ok.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_Ok.BackColor = System.Drawing.SystemColors.Control;
             this.bt_Ok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_Ok.BackgroundImage")));
             this.bt_Ok.ButtonText = "OK";
@@ -75,6 +77,7 @@
             // 
             // lb_name
             // 
+            this.lb_name.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lb_name.AutoSize = true;
             this.lb_name.Font = new System.Drawing.Font("Aachen", 14.25F, System.Drawing.FontStyle.Bold);
             this.lb_name.Location = new System.Drawing.Point(112, 9);
@@ -90,6 +93,7 @@
             this.bt_cancel.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.bt_cancel.ActiveForecolor = System.Drawing.Color.White;
             this.bt_cancel.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bt_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.bt_cancel.BackColor = System.Drawing.SystemColors.Control;
             this.bt_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_cancel.BackgroundImage")));
             this.bt_cancel.ButtonText = "Cancel";
