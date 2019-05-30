@@ -61,6 +61,10 @@ namespace Bai2
             if (DemTongGiay == thietlap.timeGame)
             {
                 time.Stop();
+                if (Score > ProfileUser.DiemCaoNhatDatDuocGame)
+                {
+                    ProfileUser.DiemCaoNhatDatDuocGame = Score;
+                }
                 MessageBoxCustoms mess = new MessageBoxCustoms("Hết giờ\nSố điểm: " + Score.ToString() + "\nSố câu trả lời đúng: " + nTrue.ToString() + "\nSố câu trả lời sai: " + nFalse.ToString(), TypeMessageEnum.KETQUA);
             }
             else

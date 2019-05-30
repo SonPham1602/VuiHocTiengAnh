@@ -78,7 +78,9 @@ namespace Bai2
             }
             else if (typeChange == 1)
             {
+                ProfileUser.ChamNgon = tb_change_name.Text;
                 Mainform.home.SetProfileUser();
+                this.Close();
             }
             
         }

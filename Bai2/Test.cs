@@ -81,6 +81,7 @@ namespace Bai2
             if (SoCauDung == arrayListWord.Length)
             {
                 timer1.Stop();
+            
                 //MessageBox.Show("CHÚC MỪNG BẠN ĐÃ HOÀN THÀNH BÀI KIỂM TRA", "THÔNG BÁO");
                 //string temp = "";
                 string[] listword = new string[arrayWord.Length];

@@ -82,7 +82,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 22);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Phiên Bản 1.5";
+            this.label2.Text = "Phiên Bản 1.6";
             // 
             // label1
             // 
@@ -105,8 +105,8 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(246, 102);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Phát triển bởi : Phạm Ngọc Sơn\r\nNgày phát hành : 2/4/2019\r\n\r\nLiên Hệ: Công ty Han" +
-    "ah ngàn đô $$$\r\nFacebook :\r\nGoogle :";
+            this.label3.Text = "Phát triển bởi : Phạm Ngọc Sơn\r\nNgày phát hành : 31/5/2019\r\n\r\nLiên Hệ: Công ty Ha" +
+    "nah ngàn đô $$$\r\nFacebook :\r\nGoogle :";
             // 
             // linkLabel1
             // 
@@ -124,7 +124,7 @@
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.linkLabel2.Location = new System.Drawing.Point(77, 202);
+            this.linkLabel2.Location = new System.Drawing.Point(95, 202);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(230, 17);
             this.linkLabel2.TabIndex = 3;

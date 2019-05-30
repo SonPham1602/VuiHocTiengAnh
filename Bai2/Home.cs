@@ -186,6 +186,7 @@ namespace Bai2
             lb_do_test.Text = ProfileUser.SoLanLamTest.ToString();
             lb_playgame_time.Text = ProfileUser.SoLanChoiGame.ToString();
             lb_cau_cham_ngon.Text = ProfileUser.ChamNgon;
+            lb_high_score_game.Text = ProfileUser.DiemCaoNhatDatDuocGame.ToString();
         }
     }
 }
