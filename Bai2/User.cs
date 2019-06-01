@@ -1252,6 +1252,11 @@ namespace Bai2
         public static int SoLanChoiGame=0;// so luong gan choi game
         public static int DiemCaoNhatDatDuocGame=0;
         public static int SoLanLamTest=0;
+        public static List<string> DsChuaThuoc;
+
+
+
+
         //Function
 
         /// <summary>
@@ -1315,7 +1320,46 @@ namespace Bai2
             DateTime d = DateTime.Now;
             return result;
         }
-      
+        public static void ReadListMarkWord()
+        {
+            try
+            {
+                List<string> Result = new List<string>();
+                var fileBytes = File.ReadLines("user_data\\ListWord.dat");
+                foreach (var line in fileBytes)
+                {
+                    Result.Add(line);
+
+                }
+                DsChuaThuoc = Result;
+                // MessageBox.Show(SoLanMoChuongTrinh.ToString());
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine(e.Message + "\n Cannot read from file.");
+            }
+        }
+        public static void SaveListMarkWord()
+        {
+            for (int i = 0; i < DsChuaThuoc.Count; i++)
+            {
+
+
+            }
+            string HistoryData="";
+            try
+            {
+                string s = "user_data" + "\\ListWord.dat";
+
+                File.WriteAllText(s, HistoryData, Encoding.UTF8);
+                //MessageBox.Show("Successful");
+            }
+            catch (IOException e)
+            {
+                MessageBox.Show(e.Message + "\n Cannot create file.");
+                return;
+            }
+        }
 
 
     }
