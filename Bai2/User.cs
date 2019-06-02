@@ -1341,17 +1341,18 @@ namespace Bai2
         }
         public static void SaveListMarkWord()
         {
+            string CacTu = "";
             for (int i = 0; i < DsChuaThuoc.Count; i++)
             {
-
+                CacTu = string.Concat(CacTu,DsChuaThuoc[i]);
 
             }
-            string HistoryData="";
+           
             try
             {
                 string s = "user_data" + "\\ListWord.dat";
 
-                File.WriteAllText(s, HistoryData, Encoding.UTF8);
+                File.WriteAllText(s, CacTu, Encoding.UTF8);
                 //MessageBox.Show("Successful");
             }
             catch (IOException e)
@@ -1359,6 +1360,22 @@ namespace Bai2
                 MessageBox.Show(e.Message + "\n Cannot create file.");
                 return;
             }
+        }
+        public static bool CheckWordOnList(string str)
+        {
+            if (DsChuaThuoc.Count == 0)
+            {
+                return false;
+            }
+           
+            for (int i = 0; i < DsChuaThuoc.Count; i++)
+            {
+                if (str == DsChuaThuoc[i])
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
 

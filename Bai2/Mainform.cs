@@ -138,6 +138,7 @@ namespace Bai2
             this.Opacity = 0;
             timer_FadeIn.Start();// tao hieu ung fade in 
             ProfileUser.ReadData();
+            ProfileUser.ReadListMarkWord();
             ProfileUser.SoLanMoChuongTrinh++;
           
            //this.StartPosition = FormStartPosition.CenterScreen;

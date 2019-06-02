@@ -65,7 +65,7 @@
             this.pb_back.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pb_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_back.Image = ((System.Drawing.Image)(resources.GetObject("pb_back.Image")));
-            this.pb_back.Location = new System.Drawing.Point(382, 16);
+            this.pb_back.Location = new System.Drawing.Point(411, 16);
             this.pb_back.Name = "pb_back";
             this.pb_back.Size = new System.Drawing.Size(50, 50);
             this.pb_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -78,7 +78,7 @@
             this.pb_audio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pb_audio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_audio.Image = ((System.Drawing.Image)(resources.GetObject("pb_audio.Image")));
-            this.pb_audio.Location = new System.Drawing.Point(542, 16);
+            this.pb_audio.Location = new System.Drawing.Point(565, 16);
             this.pb_audio.Name = "pb_audio";
             this.pb_audio.Size = new System.Drawing.Size(50, 50);
             this.pb_audio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -91,7 +91,7 @@
             this.pb_next.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pb_next.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_next.Image = ((System.Drawing.Image)(resources.GetObject("pb_next.Image")));
-            this.pb_next.Location = new System.Drawing.Point(693, 16);
+            this.pb_next.Location = new System.Drawing.Point(712, 16);
             this.pb_next.Name = "pb_next";
             this.pb_next.Size = new System.Drawing.Size(50, 50);
             this.pb_next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,13 +183,13 @@
             // lb_mean_word
             // 
             this.lb_mean_word.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lb_mean_word.AutoSize = true;
             this.lb_mean_word.Font = new System.Drawing.Font("Circle", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_mean_word.Location = new System.Drawing.Point(536, 666);
+            this.lb_mean_word.Location = new System.Drawing.Point(235, 666);
             this.lb_mean_word.Name = "lb_mean_word";
-            this.lb_mean_word.Size = new System.Drawing.Size(69, 31);
+            this.lb_mean_word.Size = new System.Drawing.Size(708, 31);
             this.lb_mean_word.TabIndex = 7;
             this.lb_mean_word.Text = "word";
+            this.lb_mean_word.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lb1
             // 

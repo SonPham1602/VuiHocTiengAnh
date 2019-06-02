@@ -64,6 +64,7 @@ namespace Bai2
         {
             InitializeComponent();
             lb_mean_word.Hide();
+            pb_mark.Hide();
 
         }
         bool checkSelectUnit()
@@ -76,6 +77,7 @@ namespace Bai2
         }
         private void pb_next_Click(object sender, EventArgs e)
         {
+  
             if (select_unit.selectedIndex!=-1)
             {
                 if (temp_start == end)
@@ -86,6 +88,15 @@ namespace Bai2
                 {
                     temp_start++;
                 }
+                if (ProfileUser.CheckWordOnList(dic.getWordByNumber(temp_start).getTu()) == true)
+                {
+                    pb_mark.Image = Properties.Resources.star;
+                }
+                else
+                {
+                    pb_mark.Image = Properties.Resources.star1;
+                }
+                
                 hienthianh.Image = dic.getWordByNumber(temp_start).getAnh();
                 lb_mean_word.Text = XulyChuoi(dic.GetMeanWord(temp_start));
             }
@@ -153,6 +164,14 @@ namespace Bai2
                 {
                     temp_start--;
                 }
+                if (ProfileUser.CheckWordOnList(dic.getWordByNumber(temp_start).getTu()) == true)
+                {
+                    pb_mark.Image = Properties.Resources.star;
+                }
+                else
+                {
+                    pb_mark.Image = Properties.Resources.star1;
+                }
                 hienthianh.Image = dic.getWordByNumber(temp_start).getAnh();
                 lb_mean_word.Text = XulyChuoi(dic.GetMeanWord(temp_start));
             }
@@ -184,6 +203,7 @@ namespace Bai2
             hienthianh.Image = dic.getWordByNumber(temp_start).getAnh();
             lb_mean_word.Text = XulyChuoi(dic.GetMeanWord(temp_start));
             lb_mean_word.Show();
+            pb_mark.Show();
 
         }
 
@@ -205,6 +225,7 @@ namespace Bai2
             MarkWord = !MarkWord;
             if (MarkWord==true)
             {
+                ProfileUser.DsChuaThuoc.Add(dic.getWordByNumber(temp_start).getTu());
                 pb_mark.Image = Properties.Resources.star;
             }
             else
