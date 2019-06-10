@@ -69,6 +69,7 @@
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(81, 404);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(243, 23);
             this.txtName.TabIndex = 14;
             // 
@@ -85,6 +86,7 @@
             this.btn_ok.TabStop = false;
             this.btn_ok.Text = "OK";
             this.btn_ok.UseVisualStyleBackColor = false;
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // btn_open_image
             // 
@@ -98,6 +100,7 @@
             this.btn_open_image.TabStop = false;
             this.btn_open_image.Text = "Open";
             this.btn_open_image.UseVisualStyleBackColor = false;
+            this.btn_open_image.Click += new System.EventHandler(this.btn_open_image_Click);
             // 
             // txtPath
             // 

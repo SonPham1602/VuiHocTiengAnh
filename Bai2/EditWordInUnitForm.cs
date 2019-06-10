@@ -11,8 +11,23 @@ namespace Bai2
 {
     public partial class EditWordInUnitForm : Form
     {
-        int numberWord;
+        public bool ChangeCheck;
+        private Image img;// this is picture, which need save
+        private string pathImage = string.Empty;
+        int numberChooseWord;
         Dictionary dic;
+        public event EventHandler PerformForm1Click;// tao event phim ok
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                const int CS_DROPSHADOW = 0x20000;
+                cp.ClassStyle |= CS_DROPSHADOW;
+                return cp;
+            }
+        } 
         public EditWordInUnitForm()
         {
             InitializeComponent();
@@ -20,14 +35,15 @@ namespace Bai2
         public EditWordInUnitForm(int numberword)
         {
             InitializeComponent();
-            numberWord = numberword;
+            numberChooseWord = numberword;
+            ChangeCheck = false;
         }
 
 
         private void SetWordWhenAwake()
         {
-            pb_show.Image = dic.getImageWordByNumber(numberWord);
-            txtName.Text = dic.GetMeanWord(numberWord);
+            pb_show.Image = dic.getImageWordByNumber(numberChooseWord);
+            txtName.Text = dic.GetMeanWord(numberChooseWord);
         }
         private void btn_close_Click(object sender, EventArgs e)
         {
@@ -54,6 +70,54 @@ namespace Bai2
         {
             MessageBoxCustoms mess = new MessageBoxCustoms("hello");
            
+        }
+
+        private void btn_open_image_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    Bitmap bitmap = new Bitmap(open.FileName);
+                    img = bitmap;
+                    pb_show.Image = bitmap;
+                    pathImage = open.FileName;
+                    txtPath.Text = open.FileName;
+                   // txtName.Text = open.SafeFileName;
+                    txtName.Text = dic.getWordByNumber(numberChooseWord).getTu();
+
+                }
+            }
+            catch (Exception)
+            {
+                throw new ApplicationException("Failed loading image");
+            }
+        }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+
+            if (pathImage == "")
+            {
+                MessageBoxCustoms mess = new MessageBoxCustoms("Bạn chưa chọn file hình ảnh", TypeMessageEnum.THONGBAO);
+            }
+            else
+            {
+                string path = @"data/images/" + dic.getWordByNumber(numberChooseWord).getTu() + ".dat"; ;
+                SaveImageData(img, path);
+                MessageBoxCustoms mess = new MessageBoxCustoms("Hình ảnh mới đã được cập nhật", TypeMessageEnum.THONGBAO);
+                ChangeCheck = true;
+                this.Close();
+            }
+           
+        }
+        public void SaveImageData(Image img, string namefile)// lưu ảnh cần save dưới dạng file nhị phân
+        {
+            namefile = namefile.Remove(namefile.LastIndexOf("."));
+            string n = namefile + ".dat";
+            img.Save(n);
         }
     }
 }

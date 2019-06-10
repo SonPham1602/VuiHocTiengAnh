@@ -12,9 +12,12 @@ namespace Bai2
     public partial class Data : Form
     {
         Dictionary dic;
+        List<int> ListWordInDataGrid;
+        private int NumerOfUnitReset;
         public Data()
         {
             InitializeComponent();
+            ListWordInDataGrid = new List<int>();
             
         }
         private void DeleteAllRow()
@@ -46,6 +49,7 @@ namespace Bai2
         }
         private void FillData(int numberUnit){
 
+            ListWordInDataGrid.Clear();
             lb_nameUnit.Text = dic.GetNameOfUnitByNumber(numberUnit);
             int s = 0;
             int e = 0;
@@ -53,6 +57,7 @@ namespace Bai2
             int temp = 1;// bien dem
             for (int i = s; i <=e; i++)
             {
+                ListWordInDataGrid.Add(i);
                 Image img = dic.getImageWordByNumber(i);             
                 Object[] row = new Object[] { temp,dic.GetMeanWord(i),img};
                 dataGrid.Rows.Add(row);
@@ -78,6 +83,7 @@ namespace Bai2
         {
             dic = new Dictionary();
             InitDataGridView();
+            NumerOfUnitReset = 1;
             FillData(1);
 
         }
@@ -89,7 +95,9 @@ namespace Bai2
 
         private void comboBox_unit_SelectedIndexChanged(object sender, EventArgs e)
         {
+            MessageBox.Show("co va");
             DeleteAllRow();
+            NumerOfUnitReset = this.comboBox_unit.SelectedIndex + 1;
             FillData(this.comboBox_unit.SelectedIndex + 1);
         }
 
@@ -98,9 +106,14 @@ namespace Bai2
             if (dataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
                 //MessageBox.Show(dataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
-                EditWordInUnitForm edit = new EditWordInUnitForm(e.RowIndex);
+                EditWordInUnitForm edit = new EditWordInUnitForm(ListWordInDataGrid[e.RowIndex]);
                 edit.ShowDialog();
-
+                if (edit.ChangeCheck == true)
+                {
+                    DeleteAllRow();
+                    FillData(NumerOfUnitReset);
+                }
+               
             }
         }
 
