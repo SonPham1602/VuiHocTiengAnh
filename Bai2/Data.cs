@@ -95,7 +95,7 @@ namespace Bai2
 
         private void comboBox_unit_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("co va");
+            //MessageBox.Show("co va");
             DeleteAllRow();
             NumerOfUnitReset = this.comboBox_unit.SelectedIndex + 1;
             FillData(this.comboBox_unit.SelectedIndex + 1);

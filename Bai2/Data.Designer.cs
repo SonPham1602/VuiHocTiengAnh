@@ -128,14 +128,14 @@
             // lb_nameUnit
             // 
             this.lb_nameUnit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lb_nameUnit.AutoSize = true;
             this.lb_nameUnit.Font = new System.Drawing.Font("Circle", 14.25F, System.Drawing.FontStyle.Italic);
             this.lb_nameUnit.ForeColor = System.Drawing.Color.DimGray;
-            this.lb_nameUnit.Location = new System.Drawing.Point(546, 9);
+            this.lb_nameUnit.Location = new System.Drawing.Point(324, 9);
             this.lb_nameUnit.Name = "lb_nameUnit";
-            this.lb_nameUnit.Size = new System.Drawing.Size(58, 31);
+            this.lb_nameUnit.Size = new System.Drawing.Size(521, 31);
             this.lb_nameUnit.TabIndex = 10;
             this.lb_nameUnit.Text = "text";
+            this.lb_nameUnit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBox_unit
             // 
@@ -216,7 +216,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -68,7 +68,7 @@ namespace Bai2
 
         private void pb_help_Click(object sender, EventArgs e)
         {
-            MessageBoxCustoms mess = new MessageBoxCustoms("hello");
+            MessageBoxCustoms mess = new MessageBoxCustoms("Bạn có thể chọn nút Mở để chọn hình muốn đổi. Sau đó nhấn OK");
            
         }
 
