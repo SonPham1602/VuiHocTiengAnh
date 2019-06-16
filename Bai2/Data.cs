@@ -42,7 +42,7 @@ namespace Bai2
             dataGrid.Columns[1].HeaderText = "Word";
             DataGridViewImageColumn imgCol = new DataGridViewImageColumn();
             imgCol.HeaderText = "Photo";
-            imgCol.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            imgCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
             dataGrid.Columns.Add(imgCol);
             dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGrid.RowTemplate.Height = 250;
@@ -121,6 +121,16 @@ namespace Bai2
         {
             AddNewUnitForm add = new AddNewUnitForm();
             add.ShowDialog();
+        }
+
+        private void btn_editUnit_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_deleteUnit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

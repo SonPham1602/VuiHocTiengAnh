@@ -345,7 +345,7 @@ namespace Bai2
             timer1 = new Timer();
             timer1.Tick += timer1_Tick;
             timer1.Interval = 1000;
-            hienthianh.SizeMode = PictureBoxSizeMode.StretchImage;
+            hienthianh.SizeMode = PictureBoxSizeMode.Zoom;
         }
         /// <summary>
         /// Function delete all items in List Used
