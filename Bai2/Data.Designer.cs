@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_add = new Bunifu.Framework.UI.BunifuImageButton();
             this.dataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btn_editUnit = new System.Windows.Forms.Button();
@@ -61,8 +61,8 @@
             // 
             this.dataGrid.AllowUserToAddRows = false;
             this.dataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -70,14 +70,14 @@
             this.dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.DoubleBuffered = true;
             this.dataGrid.EnableHeadersVisualStyles = false;
@@ -146,51 +146,6 @@
             this.comboBox_unit.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_unit.FormattingEnabled = true;
             this.comboBox_unit.ItemHeight = 20;
-            this.comboBox_unit.Items.AddRange(new object[] {
-            "Unit 1 It\'s time to wake up",
-            "Unit 2 Let\'s get dressed",
-            "Unit 3 Breakfast-time",
-            "Unit 4 Going to school",
-            "Unit 5 Lesson time",
-            "Unit 6 Indoor playtime",
-            "Unit 7 Outdoor playtime",
-            "Unit 8 Snack-time",
-            "Unit 9 In the kitchen",
-            "Unit 10 Dinner-time",
-            "Unit 11 In the bathroom",
-            "Unit 12 Let\'s relax",
-            "Unit 13 Bedtime",
-            "Unit 14 Happy Birthday, David!",
-            "Unit 15 It\'s sunny today!",
-            "Unit 16 Our pet show",
-            "Unit 17 Our school concert",
-            "Unit 18 At the fast-food restaurant",
-            "Unit 19 At the supermarket",
-            "Unit 20 At the shopping center",
-            "Unit 21 At the bird park",
-            "Unit 22 At the zoo",
-            "Unit 23 At the beach",
-            "Unit 24 At the circus",
-            "Unit 25 In the playgrounf",
-            "Unit 26 At the park",
-            "Unit 27 On the farm",
-            "Unit 28 At the swimming pool",
-            "Unit 29 At the library",
-            "Unit 30 The postman",
-            "Unit 31 The dustman",
-            "Unit 32 The policeman",
-            "Unit 33 The fireman",
-            "Unit 34 The Builder",
-            "Unit 35 The hairdresser and the barber",
-            "Unit 36 The dentist",
-            "Unit 37 The doctor",
-            "Unit 38 Le\'s go for a car ride",
-            "Unit 39 At the garage",
-            "Unit 40 Let\'s ride in the bus ",
-            "Unit 41 Let\'s ride on the underground train ",
-            "Unit 42 Let\'s go for a boat ride",
-            "Unit 43 At the railway station ",
-            "Unit 44 At the airport"});
             this.comboBox_unit.Location = new System.Drawing.Point(12, 12);
             this.comboBox_unit.MaxDropDownItems = 10;
             this.comboBox_unit.Name = "comboBox_unit";

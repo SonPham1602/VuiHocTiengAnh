@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewUnitForm));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.tb_noidung = new System.Windows.Forms.TextBox();
-            this.tb_name = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btn_OK = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_name = new System.Windows.Forms.TextBox();
+            this.tb_noidung = new System.Windows.Forms.TextBox();
+            this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_OK = new System.Windows.Forms.Button();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label3 = new System.Windows.Forms.Label();
@@ -65,6 +65,45 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(585, 346);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(2, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 18);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Words In Unit";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(3, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 18);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Name Of Unit";
+            // 
+            // tb_name
+            // 
+            this.tb_name.Location = new System.Drawing.Point(106, 22);
+            this.tb_name.Name = "tb_name";
+            this.tb_name.Size = new System.Drawing.Size(450, 20);
+            this.tb_name.TabIndex = 1;
+            // 
+            // tb_noidung
+            // 
+            this.tb_noidung.Location = new System.Drawing.Point(106, 77);
+            this.tb_noidung.Multiline = true;
+            this.tb_noidung.Name = "tb_noidung";
+            this.tb_noidung.Size = new System.Drawing.Size(450, 246);
+            this.tb_noidung.TabIndex = 0;
+            // 
             // bunifuGradientPanel2
             // 
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
@@ -81,49 +120,15 @@
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(580, 71);
             this.bunifuGradientPanel2.TabIndex = 1;
             // 
-            // tb_noidung
+            // btn_cancel
             // 
-            this.tb_noidung.Location = new System.Drawing.Point(106, 77);
-            this.tb_noidung.Multiline = true;
-            this.tb_noidung.Name = "tb_noidung";
-            this.tb_noidung.Size = new System.Drawing.Size(450, 246);
-            this.tb_noidung.TabIndex = 0;
-            // 
-            // tb_name
-            // 
-            this.tb_name.Location = new System.Drawing.Point(106, 22);
-            this.tb_name.Name = "tb_name";
-            this.tb_name.Size = new System.Drawing.Size(450, 20);
-            this.tb_name.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(3, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 18);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Name Of Unit";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(2, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Words In Unit";
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 0;
-            this.bunifuElipse1.TargetControl = this;
+            this.btn_cancel.Location = new System.Drawing.Point(405, 15);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(112, 39);
+            this.btn_cancel.TabIndex = 1;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_OK
             // 
@@ -135,22 +140,17 @@
             this.btn_OK.UseVisualStyleBackColor = true;
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
-            // btn_cancel
+            // bunifuElipse1
             // 
-            this.btn_cancel.Location = new System.Drawing.Point(405, 15);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(112, 39);
-            this.btn_cancel.TabIndex = 1;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            this.bunifuElipse1.ElipseRadius = 0;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // btn_close
             // 
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(567, 7);
+            this.btn_close.Location = new System.Drawing.Point(567, 12);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(30, 30);
             this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

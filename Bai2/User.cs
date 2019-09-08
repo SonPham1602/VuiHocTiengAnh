@@ -106,6 +106,7 @@ namespace Bai2
 
         private List<Word> DSWord = new List<Word>();
         private List<string> NameUnit = new List<string>();
+        
         public Dictionary()
         {
             addword();
@@ -137,7 +138,8 @@ namespace Bai2
         {
             using (StreamWriter w = File.AppendText(@"data\data.txt"))
             {
-                w.WriteLine(name);
+                w.WriteLine();
+                w.Write(name);
             }
 
             File.WriteAllText(@"data\"+name+".txt", noidung);
@@ -199,9 +201,14 @@ namespace Bai2
 
             }
         }
-        public void ReadUnit(string NameUnit)
+        public string ReadUnit(string NameUnit)
         {
-
+            string path = "data\\" + NameUnit + ".txt";
+            FileStream fs = new FileStream(path, FileMode.Open);
+            StreamReader sr = new StreamReader(fs);
+            string str = sr.ReadToEnd();
+            fs.Close();
+            return str;       
         }
         public bool OpenFileAndLoad(string path, int nameunit)
         {
@@ -270,6 +277,10 @@ namespace Bai2
             fs.Close();
 
         }
+        public int getNumberOfUnit()
+        {
+            return NameUnit.Count;
+        }
         public Stream GenerateStreamFromString(string s)
         {
             MemoryStream stream = new MemoryStream();
@@ -279,6 +290,7 @@ namespace Bai2
             stream.Position = 0;
             return stream;
         }
+       
         public int ShowNumberWordOfUnit(int numberUnit)
         {
             int result = 0;
@@ -301,184 +313,33 @@ namespace Bai2
         {
             return NameUnit[number-1];
         }
+        /// <summary>
+        /// This function will return list of Unit
+        /// </summary>
+        /// <returns></returns>
+        public List<string> RefeshAndLoadListUnit()
+        {
+            List<string> arrayUnit = new List<string>();
+            FileStream fs = new FileStream(@"data\data.txt", FileMode.Open);
+            StreamReader sr = new StreamReader(fs);
+            string str = sr.ReadLine();
+            while (str != null)
+            {
+                arrayUnit.Add(str);
+                str = sr.ReadLine();
+            }
+            return arrayUnit;
+        }
         public void addword()
         {
-            /*//1
+            /*1
             object O = Resource.ResourceManager.GetObject("Unit_1_It_sTimeToWakeUp");
             Stream path = GenerateStreamFromString((string)O);
             OpenFileAndLoad(path, 1);
-            //2
-            O = Resource.ResourceManager.GetObject("Unit_2_LetsGetDressed");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path,2);
-            //3
-            O = Resource.ResourceManager.GetObject("Unit_3_BreafastTime");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 3);
-            //4
-            O = Resource.ResourceManager.GetObject("Unit_4_GoingToSchool");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 4);
-            //5
-            O = Resource.ResourceManager.GetObject("Unit_5_LessonTime");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 5);
-            //6
-            O = Resource.ResourceManager.GetObject("Unit_6_IndoorPlaytime");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 6);
-            //7
-            O = Resource.ResourceManager.GetObject("Unit_7_OutdoorPlaytime");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 7);
-            //8
-            O = Resource.ResourceManager.GetObject("Unit_8_SnackTime");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 8);
-            //9
-            O = Resource.ResourceManager.GetObject("Unit_9_InTheKitchen");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 9);
-            //10
-            O = Resource.ResourceManager.GetObject("Unit_10_Dinner_time");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 10);
-            //11
-            O = Resource.ResourceManager.GetObject("Unit_11_In_the_bathroom");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 11);
-            //12
-            O = Resource.ResourceManager.GetObject("Unit_12_Lets_relax");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 12);
-            //13
-            O = Resource.ResourceManager.GetObject("Unit_13_Bedtime");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 13);
-            //14
-            O = Resource.ResourceManager.GetObject("Unit_14_HappyBirthdat_David");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 14);
-            //15
-            O = Resource.ResourceManager.GetObject("Unit_15_Its_sunny_today");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 15);
-            //16
-            O = Resource.ResourceManager.GetObject("Unit_16_OurPetShow");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 16);
-            //17
-            O = Resource.ResourceManager.GetObject("Unit_17_OurSchoolConcert");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 17);
-            //18
-            O = Resource.ResourceManager.GetObject("Unit_18_AtTheFastFoodRestaurant");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 18);
-            //19
-            O = Resource.ResourceManager.GetObject("Unit_19_AtTheSupermarket");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 19);
-            //20
-            O = Resource.ResourceManager.GetObject("Unit_20_AtTheShoppingCentre");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 20);
-            //21
-            O = Resource.ResourceManager.GetObject("Unit_21_AtTheBirdPark");
-            path = GenerateStreamFromString((string)O);
-            OpenFileAndLoad(path, 21);*/
+          
 
             //string path = @"data\Unit_1_It'sTimeToWakeUp.txt";
-            //OpenFileAndLoad(path, 1);
-            //path = @"data\Unit_2_Let'sGetDressed.txt";
-            //OpenFileAndLoad(path, 2);
-            //path = @"data\Unit_3_BreafastTime.txt";
-            //OpenFileAndLoad(path, 3);
-            //path = @"data\Unit_4_GoingToSchool.txt";
-            //OpenFileAndLoad(path, 4);
-            //path = @"data\Unit_5_LessonTime.txt";
-            //OpenFileAndLoad(path, 5);
-            //path = @"data\Unit_6_IndoorPlaytime.txt";
-            //OpenFileAndLoad(path, 6);
-            //path = @"data\Unit_7_OutdoorPlaytime.txt";
-            //OpenFileAndLoad(path, 7);
-            //path = @"data\Unit_8_SnackTime.txt";
-            //OpenFileAndLoad(path, 8);
-            //path = @"data\Unit_9_InTheKitchen.txt";
-            //OpenFileAndLoad(path, 9);
-            //path = @"data\Unit_10_Dinner_time.txt";
-            //OpenFileAndLoad(path, 10);
-            //path = @"data\Unit_11_In_the_bathroom.txt";
-            //OpenFileAndLoad(path, 11);
-            //path = @"data\Unit_12_Let's_relax.txt";
-            //OpenFileAndLoad(path, 12);
-            //path = @"data\Unit_13_Bedtime.txt";
-            //OpenFileAndLoad(path, 13);
-            //path = @"data\Unit_14_HappyBirthdat,David.txt";
-            //OpenFileAndLoad(path, 14);
-            //path = @"data\Unit_15_It's_sunny_today.txt";
-            //OpenFileAndLoad(path, 15);
-            //path = @"data\Unit_16_OurPetShow.txt";
-            //OpenFileAndLoad(path, 16);
-            //path = @"data\Unit_17_OurSchoolConcert.txt";
-            //OpenFileAndLoad(path, 17);
-            //path = @"data\Unit_18_AtTheFastFoodRestaurant.txt";
-            //OpenFileAndLoad(path, 18);
-            //path = @"data\Unit_19_AtTheSupermarket.txt";
-            //OpenFileAndLoad(path, 19);
-            //path = @"data\Unit_20_AtTheShoppingCentre.txt";
-            //OpenFileAndLoad(path, 20);
-            //path = @"data\Unit_21_AtTheBirdPark.txt";
-            //OpenFileAndLoad(path, 21);
-            //path = @"data\Unit_22_AtTheZoo.txt";
-            //OpenFileAndLoad(path, 22);
-            //path = @"data\Unit_23_AtTheBeach.txt";
-            //OpenFileAndLoad(path, 23);
-            //path = @"data\Unit_24_AtTheCircus.txt";
-            //OpenFileAndLoad(path, 24);
-            //path = @"data\Unit_25_InThePlayground.txt";
-            //OpenFileAndLoad(path, 25);
-            //path = @"data\Unit_26_AtThePark.txt";
-            //OpenFileAndLoad(path, 26);
-            //path = @"data\Unit_27_OnTheFarm.txt";
-            //OpenFileAndLoad(path, 27);
-            //path = @"data\Unit_28_AtTheSwimmingPool.txt";
-            //OpenFileAndLoad(path, 28);
-            //path = @"data\Unit_29_AtTheLibrary.txt";
-            //OpenFileAndLoad(path, 29);
-            //path = @"data\Unit_30_PostMan.txt";
-            //OpenFileAndLoad(path, 30);
-            //path = @"data\Unit_31_TheDustMan.txt";
-            //OpenFileAndLoad(path, 31);
-            //path = @"data\Unit_32_ThePoliceman.txt";
-            //OpenFileAndLoad(path, 32);
-            //path = @"data\Unit_33_TheFireman.txt";
-            //OpenFileAndLoad(path, 33);
-            //path = @"data\Unit_34_TheBuilder.txt";
-            //OpenFileAndLoad(path, 34);
-            //path = @"data\Unit_35_TheHairdresserAndTheBarber.txt";
-            //OpenFileAndLoad(path, 35);
-            //path = @"data\Unit_36_TheDentist.txt";
-            //OpenFileAndLoad(path, 36);
-            //path = @"data\Unit_37_TheDoctor.txt";
-            //OpenFileAndLoad(path, 37);
-            //path = @"data\Unit_38_LetsGoForACarRide.txt";
-            //OpenFileAndLoad(path, 38);
-            //path = @"data\Unit_39_AtTheGarage.txt";
-            //OpenFileAndLoad(path, 39);
-            //path = @"data\Unit_40_LetsRideInABus.txt";
-            //OpenFileAndLoad(path, 40);
-            //path = @"data\Unit_41_LetsRideOnTheUndergroundTrain.txt";
-            //OpenFileAndLoad(path, 41);
-            //path = @"data\Unit_42_LetsGoForABoatRide.txt";
-            //OpenFileAndLoad(path, 42);
-            //path = @"data\Unit_43_AtTheRailwayStation.txt";
-            //OpenFileAndLoad(path, 43);
-            //path = @"data\Unit_44_AtTheAirport.txt";
-            //OpenFileAndLoad(path, 44);
-
-           
-
+            //OpenFileAndLoad(path, 1);*/
             FileStream fs = new FileStream(@"data\data.txt", FileMode.Open);
             StreamReader sr = new StreamReader(fs);
             string str = sr.ReadLine();
@@ -542,6 +403,7 @@ namespace Bai2
             result = DSWord[n];
             return result.getAnh();
         }
+       
         public Image getImageWordByWord(string nameword)
         {
             Word result = new Word();

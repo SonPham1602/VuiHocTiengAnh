@@ -37,18 +37,27 @@ namespace Bai2
         {
             string message = "Do you want to save ?";
             string title = "Save Window";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.Yes)
+          
+
+            if (tb_name.Text == "" || tb_noidung.Text == "")
             {
-                this.Close();
+                MessageBoxCustoms mes = new MessageBoxCustoms("Không được để trống tên hoặc nội dung unit", TypeMessageEnum.THONGBAO);
             }
             else
             {
-                dic.AddListWordInNewUnit(tb_name.Text, tb_noidung.Text); 
-            }  
-           
-
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    dic.AddListWordInNewUnit(tb_name.Text, tb_noidung.Text);
+                    MessageBoxCustoms mes = new MessageBoxCustoms("Lưu thành công", TypeMessageEnum.THONGBAO);
+                    this.Close();
+                }
+                else
+                {
+                    this.Close();
+                }  
+            }
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

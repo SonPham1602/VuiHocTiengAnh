@@ -17,7 +17,9 @@ namespace Bai2
         public Data()
         {
             InitializeComponent();
+           
             ListWordInDataGrid = new List<int>();
+            
             
         }
         private void DeleteAllRow()
@@ -82,6 +84,7 @@ namespace Bai2
         private void Data_Load(object sender, EventArgs e)
         {
             dic = new Dictionary();
+            SetDataComboBoxUnit();
             InitDataGridView();
             NumerOfUnitReset = 1;
             FillData(1);
@@ -125,12 +128,29 @@ namespace Bai2
 
         private void btn_editUnit_Click(object sender, EventArgs e)
         {
-            
+            EditUnitForm edit = new EditUnitForm(NumerOfUnitReset);
+            edit.ShowDialog();
         }
 
         private void btn_deleteUnit_Click(object sender, EventArgs e)
         {
 
         }
+        private void SetDataComboBoxUnit()
+        {
+            List<string> arrayList = dic.RefeshAndLoadListUnit();
+            for (int i = 0; i < arrayList.Count; i++)
+            {
+
+                comboBox_unit.Items.Add(ClearUnderscoreInString(arrayList[i]));
+            }
+            comboBox_unit.Refresh();
+        }
+        private string ClearUnderscoreInString(string str)
+        {
+           str = str.Replace('_', ' ');
+            return str;
+        }
+        
     }
 }
