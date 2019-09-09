@@ -46,7 +46,7 @@ namespace Bai2
         }
         private void btn_OK_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

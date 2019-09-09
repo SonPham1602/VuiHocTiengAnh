@@ -33,7 +33,6 @@
             this.pb_close = new System.Windows.Forms.PictureBox();
             this.pb_maximize = new System.Windows.Forms.PictureBox();
             this.pb_minimize = new System.Windows.Forms.PictureBox();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bt_game = new Bunifu.Framework.UI.BunifuImageButton();
             this.bt_help = new Bunifu.Framework.UI.BunifuImageButton();
             this.bt_data = new Bunifu.Framework.UI.BunifuImageButton();
@@ -113,11 +112,6 @@
             this.pb_minimize.TabIndex = 16;
             this.pb_minimize.TabStop = false;
             this.pb_minimize.Click += new System.EventHandler(this.pb_minimize_Click);
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // bt_game
             // 
@@ -397,6 +391,7 @@
             this.Text = "Vui Hoc Tieng Anh";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Mainform_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Mainform_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.pb_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_maximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_minimize)).EndInit();
@@ -424,7 +419,6 @@
         private System.Windows.Forms.PictureBox pb_close;
         private System.Windows.Forms.PictureBox pb_maximize;
         private System.Windows.Forms.PictureBox pb_minimize;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuImageButton bt_test;
         private Bunifu.Framework.UI.BunifuImageButton bt_setting;

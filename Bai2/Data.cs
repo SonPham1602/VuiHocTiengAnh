@@ -60,7 +60,15 @@ namespace Bai2
             for (int i = s; i <=e; i++)
             {
                 ListWordInDataGrid.Add(i);
-                Image img = dic.getImageWordByNumber(i);             
+                Image img;
+                if (dic.getWordByNumber(i).checkImageExist() == true)
+                {
+                    img = dic.getImageWordByNumber(i);
+                }
+                else
+                {
+                    img = Image.FromFile(@"data/emptyPicture.jpg");
+                }                    
                 Object[] row = new Object[] { temp,dic.GetMeanWord(i),img};
                 dataGrid.Rows.Add(row);
                 temp++;
@@ -134,7 +142,15 @@ namespace Bai2
 
         private void btn_deleteUnit_Click(object sender, EventArgs e)
         {
+            MessageBoxYesNoCustom mes = new MessageBoxYesNoCustom("Bạn có muốn xoá Unit này?");
+            if (mes.Check == true)
+            {
+                
+            }
+            else
+            {
 
+            }
         }
         private void SetDataComboBoxUnit()
         {

@@ -28,16 +28,8 @@ namespace Bai2
             this.Close();
         }
 
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]// can using  System.Runtime.InteropServices
-        private static extern IntPtr CreateRoundRectRgn// ham tao corner radius 
-        (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // height of ellipse
-            int nHeightEllipse // width of ellipse
-        );
+       
+
 
         protected override CreateParams CreateParams
         {
@@ -148,7 +140,17 @@ namespace Bai2
             //login_user.Show();
             
         }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
 
+            Graphics g = e.Graphics;
+            using (Pen selPen = new Pen(Color.Black))
+            {
+                g.DrawRectangle(selPen, 0, 0, this.Width, this.Height);
+                e.Graphics.DrawRectangle(Pens.Black, new Rectangle(5, 5, Width - 2, Height - 2));
+            }
+        }
         private void CreateFolder(string name)
         {
             try
@@ -257,7 +259,7 @@ namespace Bai2
             int h=Screen.PrimaryScreen.Bounds.Height-nTaskBarHeight;
             if (this.Size == new System.Drawing.Size(w, h))
             {
-                this.bunifuElipse1.ElipseRadius = 15;
+               // this.bunifuElipse1.ElipseRadius = 15;
                 this.Location = new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (CurrentSizeForm.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (CurrentSizeForm.Height / 2)); // ham di chuyen form ve vi tri chinh giua man hinh
                 this.Size = CurrentSizeForm;
                 setting.SetData(this.Size, this.pn_bar.GradientBottomLeft);
@@ -265,7 +267,7 @@ namespace Bai2
             }
             else
             {
-                this.bunifuElipse1.ElipseRadius = 0;
+                //this.bunifuElipse1.ElipseRadius = 0;
                 this.Location = new Point(0, 0);
                 this.Size = new System.Drawing.Size(w,h);
                 setting.SetData(this.Size, this.pn_bar.GradientBottomLeft);           
@@ -375,12 +377,12 @@ namespace Bai2
             this.Size = e.size;
             if (e.size.Width == Screen.PrimaryScreen.Bounds.Size.Width)
             {
-                this.bunifuElipse1.ElipseRadius = 0;
+               // this.bunifuElipse1.ElipseRadius = 0;
                 this.Location = new Point(0, 0);
             }
             else
             {
-                this.bunifuElipse1.ElipseRadius = 15;
+                //this.bunifuElipse1.ElipseRadius = 15;
                 this.Location = new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (this.Size.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (this.Size.Height / 2)); // ham di chuyen form ve vi tri chinh giua man hinh
             }
             //this.Location=new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (this.Size.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (this.Size.Height / 2)); // ham di chuyen form ve vi tri chinh giua man hinh
@@ -492,6 +494,16 @@ namespace Bai2
         {
             ProfileUser.SaveData();
         }
+        private void PaintBorderForm()
+        {
+            
+        }
+
+        private void Mainform_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, this.pn_bar.ClientRectangle, Color.DimGray, ButtonBorderStyle.Solid);
+        }
+        
     }
     
 }

@@ -40,6 +40,16 @@ namespace Bai2
         {
             OrdinalNumbers = n;
         }
+        public bool checkImageExist()
+        {
+            string n = anh + ".dat";
+            bool checkExist=File.Exists(@"data\images\" + n);
+            if (checkExist == false)
+            {
+                return false;
+            }
+            return true;
+        }
         public Image getAnh()
         {
 
