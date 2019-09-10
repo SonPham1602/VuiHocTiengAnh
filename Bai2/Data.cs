@@ -132,6 +132,7 @@ namespace Bai2
         {
             AddNewUnitForm add = new AddNewUnitForm();
             add.ShowDialog();
+            SetDataComboBoxUnit();
         }
 
         private void btn_editUnit_Click(object sender, EventArgs e)
@@ -145,7 +146,8 @@ namespace Bai2
             MessageBoxYesNoCustom mes = new MessageBoxYesNoCustom("Bạn có muốn xoá Unit này?");
             if (mes.Check == true)
             {
-                
+                MessageBox.Show(dic.GetNameOfUnitByNumber(NumerOfUnitReset));
+                dic.DeleteUnit(dic.GetNameOfUnitByNumber(NumerOfUnitReset));
             }
             else
             {

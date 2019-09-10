@@ -21,6 +21,14 @@ namespace Bai2
                 return cp;
             }
         }
+        Timer t1 = new Timer();
+        void fadeIn(object sender, EventArgs e)
+        {
+            if (Opacity >= 1)
+                t1.Stop();   //this stops the timer if the form is completely displayed
+            else
+                Opacity += 0.09;
+        }
         void PaintBox(object sender, PaintEventArgs pea)
         {
             // Draw nice Sun and detailed grass
@@ -58,6 +66,14 @@ namespace Bai2
         private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void MessageBoxYesNoCustom_Load(object sender, EventArgs e)
+        {
+            Opacity = 0;      //first the opacity is 0
+            t1.Interval = 10;  //we'll increase the opacity every 10ms
+            t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
+            t1.Start();
         }
     }
 }

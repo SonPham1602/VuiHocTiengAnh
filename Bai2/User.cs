@@ -184,7 +184,7 @@ namespace Bai2
         public void DeleteUnit(string NameUnit)
         {
             string contents = File.ReadAllText(@"data\data.txt");// noi dung
-            contents = contents.Replace(NameUnit+"\n","");
+            contents = contents.Replace("\n"+NameUnit,"");
             File.WriteAllText(@"data\data.txt", contents);
            
         }

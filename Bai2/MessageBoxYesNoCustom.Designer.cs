@@ -135,6 +135,7 @@
             this.Name = "MessageBoxYesNoCustom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessageBoxYesNoCustom";
+            this.Load += new System.EventHandler(this.MessageBoxYesNoCustom_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).EndInit();

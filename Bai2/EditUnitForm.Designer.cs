@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUnitForm));
             this.label3 = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.PictureBox();
@@ -39,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_name = new System.Windows.Forms.TextBox();
             this.tb_noidung = new System.Windows.Forms.TextBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -161,6 +163,13 @@
             this.tb_noidung.Size = new System.Drawing.Size(450, 246);
             this.tb_noidung.TabIndex = 0;
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // EditUnitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +205,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_name;
         private System.Windows.Forms.TextBox tb_noidung;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
 
     }
 }
