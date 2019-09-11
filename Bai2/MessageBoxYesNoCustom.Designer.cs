@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageBoxYesNoCustom));
             this.lb_noidung = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -35,6 +36,7 @@
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.btn_ok = new System.Windows.Forms.PictureBox();
             this.btn_cancel = new System.Windows.Forms.PictureBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).BeginInit();
@@ -122,6 +124,13 @@
             this.btn_cancel.TabStop = false;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.bunifuGradientPanel1;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // MessageBoxYesNoCustom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +161,7 @@
         private System.Windows.Forms.PictureBox btn_close;
         private System.Windows.Forms.PictureBox btn_ok;
         private System.Windows.Forms.PictureBox btn_cancel;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
 
     }
 }
