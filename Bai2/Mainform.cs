@@ -98,7 +98,7 @@ namespace Bai2
             this.StartPosition = FormStartPosition.CenterScreen;
            
         }
-        private Bai2.Dictionary Dic = new Bai2.Dictionary();
+        public static Bai2.Dictionary Dic = new Bai2.Dictionary();
         
         // thuoc tinh chuong trinh
         Size CurrentSizeForm= new Size();

@@ -11,7 +11,7 @@ namespace Bai2
 {
     public partial class Data : Form
     {
-        Dictionary dic;
+        Dictionary dic = Mainform.Dic;
         List<int> ListWordInDataGrid;
         private int NumerOfUnitReset;
         public Data()
@@ -87,11 +87,12 @@ namespace Bai2
         {
             AddDataForm a = new AddDataForm();
             a.ShowDialog();
+            dic = Mainform.Dic;
         }
 
         private void Data_Load(object sender, EventArgs e)
         {
-            dic = new Dictionary();
+            //dic = new Dictionary();
             SetDataComboBoxUnit();
             InitDataGridView();
             NumerOfUnitReset = 1;
@@ -132,6 +133,7 @@ namespace Bai2
         {
             AddNewUnitForm add = new AddNewUnitForm();
             add.ShowDialog();
+            dic = Mainform.Dic;
             SetDataComboBoxUnit();
         }
 
@@ -148,6 +150,7 @@ namespace Bai2
             {
                 MessageBox.Show(dic.GetNameOfUnitByNumber(NumerOfUnitReset));
                 dic.DeleteUnit(dic.GetNameOfUnitByNumber(NumerOfUnitReset));
+                
             }
             else
             {

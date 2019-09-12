@@ -12,7 +12,7 @@ namespace Bai2
 {
     public partial class AddNewUnitForm : Form
     {
-        Dictionary dic;
+        Dictionary dic = Mainform.Dic;
         public AddNewUnitForm()
         {
             InitializeComponent();
@@ -49,7 +49,8 @@ namespace Bai2
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    dic.AddListWordInNewUnit(tb_name.Text, tb_noidung.Text);
+                    Mainform.Dic.AddListWordInNewUnit(tb_name.Text,tb_noidung.Text);
+                    Mainform.Dic.addword();
                     MessageBoxCustoms mes = new MessageBoxCustoms("Lưu thành công", TypeMessageEnum.THONGBAO);
                     this.Close();
                 }
@@ -67,7 +68,7 @@ namespace Bai2
 
         private void AddNewUnitForm_Load(object sender, EventArgs e)
         {
-            dic = new Dictionary();
+
         }
         protected override CreateParams CreateParams
         {

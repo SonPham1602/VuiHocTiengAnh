@@ -184,7 +184,7 @@ namespace Bai2
         public void DeleteUnit(string NameUnit)
         {
             string contents = File.ReadAllText(@"data\data.txt");// noi dung
-            contents = contents.Replace("\n"+NameUnit,"");
+            contents = contents.Replace("\r"+NameUnit,"");
             File.WriteAllText(@"data\data.txt", contents);
            
         }
@@ -338,6 +338,7 @@ namespace Bai2
                 arrayUnit.Add(str);
                 str = sr.ReadLine();
             }
+            fs.Close();
             return arrayUnit;
         }
         public void addword()
