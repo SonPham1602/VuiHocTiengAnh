@@ -130,7 +130,25 @@ namespace Bai2
             }
         }
 
-        private void btn_addUnit_Click(object sender, EventArgs e)
+     
+        private void SetDataComboBoxUnit()
+        {
+            List<string> arrayList = dic.RefeshAndLoadListUnit();
+            comboBox_unit.Items.Clear();
+            for (int i = 0; i < arrayList.Count; i++)
+            {
+
+                comboBox_unit.Items.Add(ClearUnderscoreInString(arrayList[i]));
+            }
+            comboBox_unit.Refresh();
+        }
+        private string ClearUnderscoreInString(string str)
+        {
+           str = str.Replace('_', ' ');
+            return str;
+        }
+
+        private void pb_addUnit_Click(object sender, EventArgs e)
         {
             AddNewUnitForm add = new AddNewUnitForm();
             add.ShowDialog();
@@ -138,13 +156,13 @@ namespace Bai2
             SetDataComboBoxUnit();
         }
 
-        private void btn_editUnit_Click(object sender, EventArgs e)
+        private void pb_editUnit_Click(object sender, EventArgs e)
         {
             EditUnitForm edit = new EditUnitForm(NumerOfUnitReset);
             edit.ShowDialog();
         }
 
-        private void btn_deleteUnit_Click(object sender, EventArgs e)
+        private void pb_deleteUnit_Click(object sender, EventArgs e)
         {
             MessageBoxYesNoCustom mes = new MessageBoxYesNoCustom("Bạn có muốn xoá Unit này?");
             if (mes.Check == true)
@@ -161,22 +179,6 @@ namespace Bai2
             {
 
             }
-        }
-        private void SetDataComboBoxUnit()
-        {
-            List<string> arrayList = dic.RefeshAndLoadListUnit();
-            comboBox_unit.Items.Clear();
-            for (int i = 0; i < arrayList.Count; i++)
-            {
-
-                comboBox_unit.Items.Add(ClearUnderscoreInString(arrayList[i]));
-            }
-            comboBox_unit.Refresh();
-        }
-        private string ClearUnderscoreInString(string str)
-        {
-           str = str.Replace('_', ' ');
-            return str;
         }
         
     }

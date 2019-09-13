@@ -59,10 +59,10 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(12, 43);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(2, 43);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(585, 346);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(596, 346);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // label2
@@ -114,10 +114,10 @@
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(12, 395);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(2, 388);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(580, 71);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(596, 60);
             this.bunifuGradientPanel2.TabIndex = 1;
             // 
             // btn_cancel
@@ -150,7 +150,7 @@
             this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_close.Image = ((System.Drawing.Image)(resources.GetObject("btn_close.Image")));
-            this.btn_close.Location = new System.Drawing.Point(567, 12);
+            this.btn_close.Location = new System.Drawing.Point(558, 7);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(30, 30);
             this.btn_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 478);
+            this.ClientSize = new System.Drawing.Size(600, 475);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.bunifuGradientPanel2);

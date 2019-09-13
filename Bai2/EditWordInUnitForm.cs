@@ -42,7 +42,15 @@ namespace Bai2
 
         private void SetWordWhenAwake()
         {
-            pb_show.Image = dic.getImageWordByNumber(numberChooseWord);
+            if (dic.getWordByNumber(numberChooseWord).checkImageExist() == true)
+            {
+                pb_show.Image = dic.getImageWordByNumber(numberChooseWord);
+            }
+            else
+            {
+                Image.FromFile(@"data/emptyPicture.jpg");
+            }
+           
             txtName.Text = dic.GetMeanWord(numberChooseWord);
         }
         private void btn_close_Click(object sender, EventArgs e)

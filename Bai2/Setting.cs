@@ -138,10 +138,15 @@ namespace Bai2
 
         private void reset_option_Click(object sender, EventArgs e)
         {
-            ResetColorSelect();
-            change(this, new ChangeUI { size = new Size(1228, 842), color = Color.FromArgb(133, 203, 248) });
-            c = Color.FromArgb(133, 203, 248);
-            SizeOfMainForm.selectedIndex = 2;
+            MessageBoxYesNoCustom mess = new MessageBoxYesNoCustom("Quay lại cài đặc mặc định ?");
+            if (mess.Check == true)
+            {
+                ResetColorSelect();
+                change(this, new ChangeUI { size = new Size(1228, 842), color = Color.FromArgb(133, 203, 248) });
+                c = Color.FromArgb(133, 203, 248);
+                SizeOfMainForm.selectedIndex = 2;
+            }
+           
         }
         private void SetToolTips()
         {

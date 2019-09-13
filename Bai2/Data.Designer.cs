@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_add = new Bunifu.Framework.UI.BunifuImageButton();
             this.dataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btn_editUnit = new System.Windows.Forms.Button();
-            this.btn_addUnit = new System.Windows.Forms.Button();
-            this.btn_deleteUnit = new System.Windows.Forms.Button();
             this.lb_nameUnit = new System.Windows.Forms.Label();
             this.comboBox_unit = new System.Windows.Forms.ComboBox();
+            this.pb_addUnit = new System.Windows.Forms.PictureBox();
+            this.pb_editUnit = new System.Windows.Forms.PictureBox();
+            this.pb_deleteUnit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_addUnit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_editUnit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_deleteUnit)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_add
@@ -61,8 +64,8 @@
             // 
             this.dataGrid.AllowUserToAddRows = false;
             this.dataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -70,14 +73,14 @@
             this.dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.DoubleBuffered = true;
             this.dataGrid.EnableHeadersVisualStyles = false;
@@ -93,39 +96,6 @@
             this.dataGrid.TabIndex = 5;
             this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             this.dataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentDoubleClick);
-            // 
-            // btn_editUnit
-            // 
-            this.btn_editUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_editUnit.Location = new System.Drawing.Point(141, 686);
-            this.btn_editUnit.Name = "btn_editUnit";
-            this.btn_editUnit.Size = new System.Drawing.Size(103, 45);
-            this.btn_editUnit.TabIndex = 7;
-            this.btn_editUnit.Text = "Edit Unit";
-            this.btn_editUnit.UseVisualStyleBackColor = true;
-            this.btn_editUnit.Click += new System.EventHandler(this.btn_editUnit_Click);
-            // 
-            // btn_addUnit
-            // 
-            this.btn_addUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_addUnit.Location = new System.Drawing.Point(12, 686);
-            this.btn_addUnit.Name = "btn_addUnit";
-            this.btn_addUnit.Size = new System.Drawing.Size(103, 45);
-            this.btn_addUnit.TabIndex = 8;
-            this.btn_addUnit.Text = "Add Unit";
-            this.btn_addUnit.UseVisualStyleBackColor = true;
-            this.btn_addUnit.Click += new System.EventHandler(this.btn_addUnit_Click);
-            // 
-            // btn_deleteUnit
-            // 
-            this.btn_deleteUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_deleteUnit.Location = new System.Drawing.Point(265, 686);
-            this.btn_deleteUnit.Name = "btn_deleteUnit";
-            this.btn_deleteUnit.Size = new System.Drawing.Size(103, 45);
-            this.btn_deleteUnit.TabIndex = 9;
-            this.btn_deleteUnit.Text = "Delete Unit";
-            this.btn_deleteUnit.UseVisualStyleBackColor = true;
-            this.btn_deleteUnit.Click += new System.EventHandler(this.btn_deleteUnit_Click);
             // 
             // lb_nameUnit
             // 
@@ -153,17 +123,56 @@
             this.comboBox_unit.TabIndex = 11;
             this.comboBox_unit.SelectedIndexChanged += new System.EventHandler(this.comboBox_unit_SelectedIndexChanged);
             // 
+            // pb_addUnit
+            // 
+            this.pb_addUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pb_addUnit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_addUnit.Image = ((System.Drawing.Image)(resources.GetObject("pb_addUnit.Image")));
+            this.pb_addUnit.Location = new System.Drawing.Point(23, 670);
+            this.pb_addUnit.Name = "pb_addUnit";
+            this.pb_addUnit.Size = new System.Drawing.Size(64, 64);
+            this.pb_addUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_addUnit.TabIndex = 12;
+            this.pb_addUnit.TabStop = false;
+            this.pb_addUnit.Click += new System.EventHandler(this.pb_addUnit_Click);
+            // 
+            // pb_editUnit
+            // 
+            this.pb_editUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pb_editUnit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_editUnit.Image = ((System.Drawing.Image)(resources.GetObject("pb_editUnit.Image")));
+            this.pb_editUnit.Location = new System.Drawing.Point(112, 670);
+            this.pb_editUnit.Name = "pb_editUnit";
+            this.pb_editUnit.Size = new System.Drawing.Size(64, 64);
+            this.pb_editUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_editUnit.TabIndex = 13;
+            this.pb_editUnit.TabStop = false;
+            this.pb_editUnit.Click += new System.EventHandler(this.pb_editUnit_Click);
+            // 
+            // pb_deleteUnit
+            // 
+            this.pb_deleteUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pb_deleteUnit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_deleteUnit.Image = ((System.Drawing.Image)(resources.GetObject("pb_deleteUnit.Image")));
+            this.pb_deleteUnit.Location = new System.Drawing.Point(207, 670);
+            this.pb_deleteUnit.Name = "pb_deleteUnit";
+            this.pb_deleteUnit.Size = new System.Drawing.Size(64, 64);
+            this.pb_deleteUnit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_deleteUnit.TabIndex = 14;
+            this.pb_deleteUnit.TabStop = false;
+            this.pb_deleteUnit.Click += new System.EventHandler(this.pb_deleteUnit_Click);
+            // 
             // Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1130, 755);
+            this.Controls.Add(this.pb_deleteUnit);
+            this.Controls.Add(this.pb_editUnit);
+            this.Controls.Add(this.pb_addUnit);
             this.Controls.Add(this.comboBox_unit);
             this.Controls.Add(this.lb_nameUnit);
-            this.Controls.Add(this.btn_deleteUnit);
-            this.Controls.Add(this.btn_addUnit);
-            this.Controls.Add(this.btn_editUnit);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.btn_add);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -172,6 +181,9 @@
             this.Load += new System.EventHandler(this.Data_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_add)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_addUnit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_editUnit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_deleteUnit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,10 +192,10 @@
 
         private Bunifu.Framework.UI.BunifuImageButton btn_add;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGrid;
-        private System.Windows.Forms.Button btn_editUnit;
-        private System.Windows.Forms.Button btn_addUnit;
-        private System.Windows.Forms.Button btn_deleteUnit;
         private System.Windows.Forms.Label lb_nameUnit;
         private System.Windows.Forms.ComboBox comboBox_unit;
+        private System.Windows.Forms.PictureBox pb_addUnit;
+        private System.Windows.Forms.PictureBox pb_editUnit;
+        private System.Windows.Forms.PictureBox pb_deleteUnit;
     }
 }

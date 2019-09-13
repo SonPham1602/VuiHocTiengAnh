@@ -17,6 +17,7 @@ namespace Bai2
             {
                 const int CS_DROPSHADOW = 0x20000;
                 CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
                 cp.ClassStyle |= CS_DROPSHADOW;
                 return cp;
             }
