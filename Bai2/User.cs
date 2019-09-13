@@ -122,6 +122,15 @@ namespace Bai2
             addword();
         }
         /// <summary>
+        /// This function will clear all unit
+        /// </summary>
+        public void ClearAllUnit()
+        {
+            DSWord.Clear();
+            NameUnit.Clear();
+        }
+
+        /// <summary>
         /// Ham tra ve anh sach cac tu trong unit cua tu dien 
         /// </summary>
         /// <param name="numberUnit">So thu tu Unit</param>
@@ -184,7 +193,7 @@ namespace Bai2
         public void DeleteUnit(string NameUnit)
         {
             string contents = File.ReadAllText(@"data\data.txt");// noi dung
-            contents = contents.Replace("\r"+NameUnit,"");
+            contents = contents.Replace("\r\n"+NameUnit,"");
             File.WriteAllText(@"data\data.txt", contents);
            
         }

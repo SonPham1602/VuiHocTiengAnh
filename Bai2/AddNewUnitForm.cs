@@ -50,6 +50,7 @@ namespace Bai2
                 if (result == DialogResult.Yes)
                 {
                     Mainform.Dic.AddListWordInNewUnit(tb_name.Text,tb_noidung.Text);
+                    Mainform.Dic.ClearAllUnit();
                     Mainform.Dic.addword();
                     MessageBoxCustoms mes = new MessageBoxCustoms("Lưu thành công", TypeMessageEnum.THONGBAO);
                     this.Close();

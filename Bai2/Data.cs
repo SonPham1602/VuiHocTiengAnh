@@ -57,7 +57,8 @@ namespace Bai2
             int e = 0;
             dic.getStartEndUnit(ref s, ref e, numberUnit);
             int temp = 1;// bien dem
-            for (int i = s; i <=e; i++)
+           // MessageBox.Show("Start " + s.ToString() + "End " + e.ToString());
+            for (int i = s; i <= e; i++)
             {
                 ListWordInDataGrid.Add(i);
                 Image img;
@@ -92,7 +93,6 @@ namespace Bai2
 
         private void Data_Load(object sender, EventArgs e)
         {
-            //dic = new Dictionary();
             SetDataComboBoxUnit();
             InitDataGridView();
             NumerOfUnitReset = 1;
@@ -107,9 +107,10 @@ namespace Bai2
 
         private void comboBox_unit_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show("co va");
+            
             DeleteAllRow();
             NumerOfUnitReset = this.comboBox_unit.SelectedIndex + 1;
+            MessageBox.Show(NumerOfUnitReset.ToString());
             FillData(this.comboBox_unit.SelectedIndex + 1);
         }
 
@@ -148,9 +149,13 @@ namespace Bai2
             MessageBoxYesNoCustom mes = new MessageBoxYesNoCustom("Bạn có muốn xoá Unit này?");
             if (mes.Check == true)
             {
-                MessageBox.Show(dic.GetNameOfUnitByNumber(NumerOfUnitReset));
-                dic.DeleteUnit(dic.GetNameOfUnitByNumber(NumerOfUnitReset));
-                
+                //MessageBox.Show("*"+dic.GetNameOfUnitByNumber(NumerOfUnitReset)+"*");
+                Mainform.Dic.DeleteUnit(dic.GetNameOfUnitByNumber(NumerOfUnitReset));
+                Mainform.Dic.ClearAllUnit();
+                Mainform.Dic.addword();
+                dic = Mainform.Dic;
+                SetDataComboBoxUnit();
+
             }
             else
             {
@@ -160,6 +165,7 @@ namespace Bai2
         private void SetDataComboBoxUnit()
         {
             List<string> arrayList = dic.RefeshAndLoadListUnit();
+            comboBox_unit.Items.Clear();
             for (int i = 0; i < arrayList.Count; i++)
             {
 

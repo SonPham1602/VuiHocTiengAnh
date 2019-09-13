@@ -86,15 +86,19 @@ namespace Bai1
             //Console.Write("WHAT'S YOUR NAME?:");
             //name=Console.ReadLine();
             //Console.WriteLine("HELLO {0}", name);
-            Dictionary Dic = new Dictionary();
-            Dic.addword();
-            Dic.Show();
-            Dic.deleteUnit("1_cot");
-            Dic.Show();
-            Dic.AddListWordInNewUnit("Unit1", "noi dung ");
-            Console.Read();
-
-
+            //Dictionary Dic = new Dictionary();
+            //Dic.addword();
+            //Dic.Show();
+            //Dic.deleteUnit("1_cot");
+            //Dic.Show();
+            //Dic.AddListWordInNewUnit("Unit1", "noi dung ");
+           // Console.Read();
+            string NameUnit = "123";
+            string contents = File.ReadAllText(@"data.txt");// noi dung
+            Console.Write(contents);
+            contents = contents.Replace("\r"+NameUnit,"");
+            File.WriteAllText(@"data.txt", contents);
+            Console.ReadLine();
         }
     }
 }
