@@ -6,7 +6,7 @@ Youtube: https://www.youtube.com/watch?v=Ki-PcuEVwCM&list=PLSSu9bneUh46CL-lJHC2z
 
 15/09/2019
 List Error to Fix
--Can reset list when add new Unit in Data form then Learn Unit Update.
+- Can reset list when add new Unit in Data form then Learn Unit Update.
 
 To Do List
 - Picker Color for setting
