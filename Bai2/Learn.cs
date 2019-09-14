@@ -58,13 +58,13 @@ namespace Bai2
         int temp_start;
         int start;
         int end;
-        
-        Dictionary dic =new Dictionary();
+       
         public Learn()
         {
             InitializeComponent();
             lb_mean_word.Hide();
             pb_mark.Hide();
+            SetDataListUnit();
 
         }
         bool checkSelectUnit()
@@ -88,7 +88,7 @@ namespace Bai2
                 {
                     temp_start++;
                 }
-                if (ProfileUser.CheckWordOnList(dic.getWordByNumber(temp_start).getTu()) == true)
+                if (ProfileUser.CheckWordOnList(Mainform.Dic.getWordByNumber(temp_start).getTu()) == true)
                 {
                     pb_mark.Image = Properties.Resources.star;
                 }
@@ -96,9 +96,17 @@ namespace Bai2
                 {
                     pb_mark.Image = Properties.Resources.star1;
                 }
-                
-                hienthianh.Image = dic.getWordByNumber(temp_start).getAnh();
-                lb_mean_word.Text = XulyChuoi(dic.GetMeanWord(temp_start));
+
+                if (Mainform.Dic.getWordByNumber(temp_start).checkImageExist() == true)
+                {
+                    hienthianh.Image = Mainform.Dic.getWordByNumber(temp_start).getAnh();
+                }
+                else
+                {
+                    hienthianh.Image = Image.FromFile(@"data/emptyImage.png");
+                }
+            
+                lb_mean_word.Text = XulyChuoi(Mainform.Dic.GetMeanWord(temp_start));
             }
             else
             {
@@ -164,7 +172,7 @@ namespace Bai2
                 {
                     temp_start--;
                 }
-                if (ProfileUser.CheckWordOnList(dic.getWordByNumber(temp_start).getTu()) == true)
+                if (ProfileUser.CheckWordOnList(Mainform.Dic.getWordByNumber(temp_start).getTu()) == true)
                 {
                     pb_mark.Image = Properties.Resources.star;
                 }
@@ -172,8 +180,15 @@ namespace Bai2
                 {
                     pb_mark.Image = Properties.Resources.star1;
                 }
-                hienthianh.Image = dic.getWordByNumber(temp_start).getAnh();
-                lb_mean_word.Text = XulyChuoi(dic.GetMeanWord(temp_start));
+                if (Mainform.Dic.getWordByNumber(temp_start).checkImageExist() == true)
+                {
+                    hienthianh.Image = Mainform.Dic.getWordByNumber(temp_start).getAnh();
+                }
+                else
+                {
+                    hienthianh.Image = Image.FromFile(@"data/emptyImage.png");
+                }
+                lb_mean_word.Text = XulyChuoi(Mainform.Dic.GetMeanWord(temp_start));
             }
             else
             {
@@ -183,7 +198,7 @@ namespace Bai2
         int GetUnitNumber(string str)
         {
             int result;
-            if (str[6] == ' ')
+             if (str[6] == ' ')
             {
                 result = str[5] - 48;
             }
@@ -196,16 +211,27 @@ namespace Bai2
         }
         private void select_unit_onItemSelected(object sender, EventArgs e)
         {
-          
-            int Selected_unit=GetUnitNumber(select_unit.selectedValue);
-            dic.getStartEndUnit(ref start, ref end, Selected_unit);// luu y la phai them ref neu ham co ref
+            
+            int Selected_unit=select_unit.selectedIndex+1;
+            //MessageBox.Show(Selected_unit.ToString());
+            Mainform.Dic.getStartEndUnit(ref start, ref end, Selected_unit);// luu y la phai them ref neu ham co ref
             temp_start = start;
-            hienthianh.Image = dic.getWordByNumber(temp_start).getAnh();
-            lb_mean_word.Text = XulyChuoi(dic.GetMeanWord(temp_start));
+            if (Mainform.Dic.getWordByNumber(temp_start).checkImageExist() == true)
+            {
+                hienthianh.Image = Mainform.Dic.getWordByNumber(temp_start).getAnh();
+            }
+            else
+            {
+                hienthianh.Image = Image.FromFile(@"data/emptyImage.png");
+            }
+            
+            lb_mean_word.Text = XulyChuoi(Mainform.Dic.GetMeanWord(temp_start));
             lb_mean_word.Show();
             pb_mark.Show();
 
         }
+
+      
 
         private void pb_reset_Click(object sender, EventArgs e)
         {
@@ -225,7 +251,7 @@ namespace Bai2
             MarkWord = !MarkWord;
             if (MarkWord==true)
             {
-                ProfileUser.DsChuaThuoc.Add(dic.getWordByNumber(temp_start).getTu());
+                ProfileUser.DsChuaThuoc.Add(Mainform.Dic.getWordByNumber(temp_start).getTu());
                 pb_mark.Image = Properties.Resources.star;
             }
             else
@@ -233,6 +259,14 @@ namespace Bai2
                 pb_mark.Image = Properties.Resources.star1;
             }
             
+        }
+        private void SetDataListUnit()
+        {
+            select_unit.Clear();
+            for (int i = 0; i < Mainform.Dic.getNumberOfUnit(); i++)
+            {
+                select_unit.AddItem(Mainform.Dic.GetNameOfUnitByNumber(i+1));
+            }
         }
 
     }

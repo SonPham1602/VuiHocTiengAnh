@@ -72,6 +72,7 @@
             this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(243, 23);
             this.txtName.TabIndex = 14;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // btn_ok
             // 

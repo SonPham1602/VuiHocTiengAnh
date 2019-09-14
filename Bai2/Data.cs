@@ -110,7 +110,7 @@ namespace Bai2
             
             DeleteAllRow();
             NumerOfUnitReset = this.comboBox_unit.SelectedIndex + 1;
-            MessageBox.Show(NumerOfUnitReset.ToString());
+           // MessageBox.Show(NumerOfUnitReset.ToString());
             FillData(this.comboBox_unit.SelectedIndex + 1);
         }
 
@@ -173,10 +173,6 @@ namespace Bai2
                 Mainform.Dic.addword();
                 dic = Mainform.Dic;
                 SetDataComboBoxUnit();
-
-            }
-            else
-            {
 
             }
         }

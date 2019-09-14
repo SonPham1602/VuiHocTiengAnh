@@ -127,5 +127,10 @@ namespace Bai2
             string n = namefile + ".dat";
             img.Save(n);
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
