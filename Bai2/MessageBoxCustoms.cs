@@ -30,8 +30,6 @@ namespace Bai2
         {
             InitializeComponent();
          
-               
-              
         }
 
         //protected override void OnPaint(PaintEventArgs e)
@@ -116,6 +114,15 @@ namespace Bai2
             {
                 this.Close();
             }
+        }
+        /// <summary>
+        /// This function will change bar color
+        /// </summary>
+        /// <param name="c"></param>
+        public void SetColorBarMessage(Color c)
+        {
+            GradientPanel.GradientTopLeft = c;
+
         }
        
     }

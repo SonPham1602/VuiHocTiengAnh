@@ -33,14 +33,14 @@
             this.bunifuFormFadeTransition1 = new Bunifu.Framework.UI.BunifuFormFadeTransition(this.components);
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.btn_ok = new System.Windows.Forms.PictureBox();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.GradientPanel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.TypeMessage = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lb_noidung = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).BeginInit();
-            this.bunifuGradientPanel1.SuspendLayout();
+            this.GradientPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuFormFadeTransition1
@@ -74,21 +74,21 @@
             this.btn_ok.TabStop = false;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
-            // bunifuGradientPanel1
+            // GradientPanel
             // 
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.TypeMessage);
-            this.bunifuGradientPanel1.Controls.Add(this.btn_close);
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.LightSteelBlue;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(218)))));
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(218)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(1, 1);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(522, 64);
-            this.bunifuGradientPanel1.TabIndex = 27;
+            this.GradientPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GradientPanel.BackgroundImage")));
+            this.GradientPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GradientPanel.Controls.Add(this.TypeMessage);
+            this.GradientPanel.Controls.Add(this.btn_close);
+            this.GradientPanel.GradientBottomLeft = System.Drawing.Color.LightSteelBlue;
+            this.GradientPanel.GradientBottomRight = System.Drawing.Color.Transparent;
+            this.GradientPanel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(218)))));
+            this.GradientPanel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(218)))));
+            this.GradientPanel.Location = new System.Drawing.Point(1, 1);
+            this.GradientPanel.Name = "GradientPanel";
+            this.GradientPanel.Quality = 10;
+            this.GradientPanel.Size = new System.Drawing.Size(522, 64);
+            this.GradientPanel.TabIndex = 27;
             // 
             // TypeMessage
             // 
@@ -124,7 +124,7 @@
             // 
             this.bunifuDragControl1.Fixed = true;
             this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.bunifuGradientPanel1;
+            this.bunifuDragControl1.TargetControl = this.GradientPanel;
             this.bunifuDragControl1.Vertical = true;
             // 
             // MessageBoxCustoms
@@ -135,7 +135,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(525, 225);
             this.Controls.Add(this.lb_noidung);
-            this.Controls.Add(this.bunifuGradientPanel1);
+            this.Controls.Add(this.GradientPanel);
             this.Controls.Add(this.btn_ok);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(525, 525);
@@ -146,7 +146,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MessageBoxCustoms_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_ok)).EndInit();
-            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.GradientPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -156,7 +156,7 @@
         private Bunifu.Framework.UI.BunifuFormFadeTransition bunifuFormFadeTransition1;
         private System.Windows.Forms.PictureBox btn_ok;
         private System.Windows.Forms.PictureBox btn_close;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private Bunifu.Framework.UI.BunifuGradientPanel GradientPanel;
         private Bunifu.Framework.UI.BunifuCustomLabel TypeMessage;
         private Bunifu.Framework.UI.BunifuCustomLabel lb_noidung;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;

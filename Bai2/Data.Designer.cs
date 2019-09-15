@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Data));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_add = new Bunifu.Framework.UI.BunifuImageButton();
             this.dataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.lb_nameUnit = new System.Windows.Forms.Label();
@@ -38,11 +38,13 @@
             this.pb_addUnit = new System.Windows.Forms.PictureBox();
             this.pb_editUnit = new System.Windows.Forms.PictureBox();
             this.pb_deleteUnit = new System.Windows.Forms.PictureBox();
+            this.btn_delete = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.btn_add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_addUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_editUnit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_deleteUnit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_delete)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_add
@@ -64,8 +66,8 @@
             // 
             this.dataGrid.AllowUserToAddRows = false;
             this.dataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -73,14 +75,14 @@
             this.dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.DoubleBuffered = true;
             this.dataGrid.EnableHeadersVisualStyles = false;
@@ -162,12 +164,28 @@
             this.pb_deleteUnit.TabStop = false;
             this.pb_deleteUnit.Click += new System.EventHandler(this.pb_deleteUnit_Click);
             // 
+            // btn_delete
+            // 
+            this.btn_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(241)))));
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.ImageActive = null;
+            this.btn_delete.Location = new System.Drawing.Point(1002, 681);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(50, 50);
+            this.btn_delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_delete.TabIndex = 15;
+            this.btn_delete.TabStop = false;
+            this.btn_delete.Zoom = 10;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
             // Data
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1130, 755);
+            this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.pb_deleteUnit);
             this.Controls.Add(this.pb_editUnit);
             this.Controls.Add(this.pb_addUnit);
@@ -184,6 +202,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_addUnit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_editUnit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_deleteUnit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_delete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +216,6 @@
         private System.Windows.Forms.PictureBox pb_addUnit;
         private System.Windows.Forms.PictureBox pb_editUnit;
         private System.Windows.Forms.PictureBox pb_deleteUnit;
+        private Bunifu.Framework.UI.BunifuImageButton btn_delete;
     }
 }

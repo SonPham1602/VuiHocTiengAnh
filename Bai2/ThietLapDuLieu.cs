@@ -293,6 +293,7 @@ namespace Bai2
 
         private void ThietLapDuLieu_Load(object sender, EventArgs e)
         {
+           SetDataSelectList();
            FadeIn();
         }
 
@@ -326,5 +327,22 @@ namespace Bai2
            // MessageBox.Show(result.ToString());
             return result;
         }
+        private void SetDataSelectList()
+        {
+            checkedListBox_Select_units.Items.Clear();
+            List<string> arrayList = Mainform.Dic.RefeshAndLoadListUnit();
+            for (int i = 0; i < arrayList.Count; i++)
+            {
+
+                checkedListBox_Select_units.Items.Add(ClearUnderscoreInString(arrayList[i]));
+            }
+            checkedListBox_Select_units.Refresh();
+        }
+        private string ClearUnderscoreInString(string str)
+        {
+            str = str.Replace('_', ' ');
+            return str;
+        }
+
     }
 }

@@ -176,6 +176,17 @@ namespace Bai2
 
             }
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            string wordDelete = "Xoa";
+            string unitDelete = "Unit Nay";
+            MessageBoxYesNoCustom mes = new MessageBoxYesNoCustom("Bạn có muốn xoá từ " + wordDelete + " trong " + unitDelete);
+            if (mes.Check == true)
+            {
+
+            }
+        }
         
     }
 }
