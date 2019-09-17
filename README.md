@@ -14,3 +14,4 @@ To Do List
 - Select new voice in the internet
 - Create apply button in Setting form for user can see change
 - Making list notification for user
+- Adding Dark mode
