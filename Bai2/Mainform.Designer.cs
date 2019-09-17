@@ -48,6 +48,7 @@
             this.pb_info = new System.Windows.Forms.PictureBox();
             this.hienthitencuaso = new System.Windows.Forms.Label();
             this.pn_show = new System.Windows.Forms.Panel();
+            this.NotificationPanel = new System.Windows.Forms.Panel();
             this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
             this.bunifuColorTransition1 = new Bunifu.Framework.UI.BunifuColorTransition(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -55,6 +56,7 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer_FadeIn = new System.Windows.Forms.Timer(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pb_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_maximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_minimize)).BeginInit();
@@ -310,12 +312,23 @@
             this.pn_show.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pn_show.Controls.Add(this.NotificationPanel);
             this.pn_show.Controls.Add(this.doubleBitmapControl1);
             this.pn_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.pn_show.Location = new System.Drawing.Point(82, 48);
             this.pn_show.Name = "pn_show";
             this.pn_show.Size = new System.Drawing.Size(1146, 794);
             this.pn_show.TabIndex = 16;
+            // 
+            // NotificationPanel
+            // 
+            this.NotificationPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NotificationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.NotificationPanel.Location = new System.Drawing.Point(1152, 0);
+            this.NotificationPanel.Name = "NotificationPanel";
+            this.NotificationPanel.Size = new System.Drawing.Size(281, 794);
+            this.NotificationPanel.TabIndex = 1;
             // 
             // doubleBitmapControl1
             // 
@@ -371,6 +384,11 @@
             // toolTip
             // 
             this.toolTip.ShowAlways = true;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // Mainform
             // 
@@ -441,6 +459,8 @@
         private System.Windows.Forms.Timer timer_FadeIn;
         private System.Windows.Forms.ToolTip toolTip;
         private BunifuAnimatorNS.DoubleBitmapControl doubleBitmapControl1;
+        private System.Windows.Forms.Panel NotificationPanel;
+        private System.Windows.Forms.Timer timer2;
         
     }
 }

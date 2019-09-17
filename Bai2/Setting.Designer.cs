@@ -41,7 +41,6 @@
             this.pb_color6 = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SizeOfMainForm = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bt_Ok = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.reset_option = new System.Windows.Forms.PictureBox();
@@ -49,6 +48,10 @@
             this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btn_OK = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_Apply = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_cancel = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_pickcolor = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_color1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_color2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_color3)).BeginInit();
@@ -56,6 +59,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_color5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_color6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reset_option)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_OK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Apply)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cancel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_pickcolor)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -199,42 +206,6 @@
             this.SizeOfMainForm.Size = new System.Drawing.Size(155, 25);
             this.SizeOfMainForm.TabIndex = 10;
             // 
-            // bt_Ok
-            // 
-            this.bt_Ok.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.bt_Ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_Ok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.bt_Ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bt_Ok.BorderRadius = 7;
-            this.bt_Ok.ButtonText = "OK";
-            this.bt_Ok.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_Ok.DisabledColor = System.Drawing.Color.Gray;
-            this.bt_Ok.Iconcolor = System.Drawing.Color.Transparent;
-            this.bt_Ok.Iconimage = null;
-            this.bt_Ok.Iconimage_right = null;
-            this.bt_Ok.Iconimage_right_Selected = null;
-            this.bt_Ok.Iconimage_Selected = null;
-            this.bt_Ok.IconMarginLeft = 0;
-            this.bt_Ok.IconMarginRight = 0;
-            this.bt_Ok.IconRightVisible = true;
-            this.bt_Ok.IconRightZoom = 0D;
-            this.bt_Ok.IconVisible = true;
-            this.bt_Ok.IconZoom = 90D;
-            this.bt_Ok.IsTab = false;
-            this.bt_Ok.Location = new System.Drawing.Point(1010, 696);
-            this.bt_Ok.Name = "bt_Ok";
-            this.bt_Ok.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.bt_Ok.OnHovercolor = System.Drawing.Color.Silver;
-            this.bt_Ok.OnHoverTextColor = System.Drawing.Color.White;
-            this.bt_Ok.selected = false;
-            this.bt_Ok.Size = new System.Drawing.Size(108, 47);
-            this.bt_Ok.TabIndex = 11;
-            this.bt_Ok.Text = "OK";
-            this.bt_Ok.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bt_Ok.Textcolor = System.Drawing.Color.White;
-            this.bt_Ok.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Ok.Click += new System.EventHandler(this.bt_Ok_Click);
-            // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.AutoSize = true;
@@ -317,19 +288,82 @@
             this.bunifuCustomLabel8.TabIndex = 18;
             this.bunifuCustomLabel8.Text = "Reset";
             // 
+            // btn_OK
+            // 
+            this.btn_OK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_OK.BackColor = System.Drawing.Color.SeaShell;
+            this.btn_OK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_OK.Image = ((System.Drawing.Image)(resources.GetObject("btn_OK.Image")));
+            this.btn_OK.ImageActive = null;
+            this.btn_OK.Location = new System.Drawing.Point(1000, 697);
+            this.btn_OK.Name = "btn_OK";
+            this.btn_OK.Size = new System.Drawing.Size(118, 46);
+            this.btn_OK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_OK.TabIndex = 19;
+            this.btn_OK.TabStop = false;
+            this.btn_OK.Zoom = 10;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
+            // 
+            // btn_Apply
+            // 
+            this.btn_Apply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Apply.BackColor = System.Drawing.Color.SeaShell;
+            this.btn_Apply.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Apply.Image = ((System.Drawing.Image)(resources.GetObject("btn_Apply.Image")));
+            this.btn_Apply.ImageActive = null;
+            this.btn_Apply.Location = new System.Drawing.Point(876, 697);
+            this.btn_Apply.Name = "btn_Apply";
+            this.btn_Apply.Size = new System.Drawing.Size(118, 46);
+            this.btn_Apply.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Apply.TabIndex = 20;
+            this.btn_Apply.TabStop = false;
+            this.btn_Apply.Zoom = 10;
+            this.btn_Apply.Click += new System.EventHandler(this.btn_Apply_Click);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_cancel.BackColor = System.Drawing.Color.SeaShell;
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancel.Image")));
+            this.btn_cancel.ImageActive = null;
+            this.btn_cancel.Location = new System.Drawing.Point(752, 697);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(118, 46);
+            this.btn_cancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_cancel.TabIndex = 21;
+            this.btn_cancel.TabStop = false;
+            this.btn_cancel.Zoom = 10;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_pickcolor
+            // 
+            this.btn_pickcolor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_pickcolor.Image = ((System.Drawing.Image)(resources.GetObject("btn_pickcolor.Image")));
+            this.btn_pickcolor.Location = new System.Drawing.Point(359, 240);
+            this.btn_pickcolor.Name = "btn_pickcolor";
+            this.btn_pickcolor.Size = new System.Drawing.Size(40, 40);
+            this.btn_pickcolor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_pickcolor.TabIndex = 22;
+            this.btn_pickcolor.TabStop = false;
+            this.btn_pickcolor.Click += new System.EventHandler(this.btn_pickcolor_Click);
+            // 
             // Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1130, 755);
+            this.Controls.Add(this.btn_pickcolor);
+            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.btn_Apply);
+            this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.bunifuCustomLabel8);
             this.Controls.Add(this.bunifuDropdown1);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.reset_option);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.bunifuCustomLabel5);
-            this.Controls.Add(this.bt_Ok);
             this.Controls.Add(this.SizeOfMainForm);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.pb_color6);
@@ -353,6 +387,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_color5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_color6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reset_option)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_OK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_Apply)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cancel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_pickcolor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,7 +409,6 @@
         private System.Windows.Forms.PictureBox pb_color6;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuDropdown SizeOfMainForm;
-        private Bunifu.Framework.UI.BunifuFlatButton bt_Ok;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private System.Windows.Forms.PictureBox reset_option;
@@ -379,5 +416,9 @@
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
         private System.Windows.Forms.ToolTip toolTip;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
+        private Bunifu.Framework.UI.BunifuImageButton btn_OK;
+        private Bunifu.Framework.UI.BunifuImageButton btn_Apply;
+        private Bunifu.Framework.UI.BunifuImageButton btn_cancel;
+        private System.Windows.Forms.PictureBox btn_pickcolor;
     }
 }

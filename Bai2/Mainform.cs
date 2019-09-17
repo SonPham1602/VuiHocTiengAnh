@@ -16,6 +16,8 @@ namespace Bai2
 {
     public partial class Mainform : Form
     {
+
+        private int WidthNotificationBar;
         public void FadeClose(object sender, EventArgs e)// tao hieu ung tat cho form chinh
         {
             int loopctr = 0;
@@ -28,7 +30,7 @@ namespace Bai2
             this.Close();
         }
 
-       
+
 
 
         protected override CreateParams CreateParams
@@ -96,49 +98,51 @@ namespace Bai2
             }
             CurrentSizeForm = this.Size;
             this.StartPosition = FormStartPosition.CenterScreen;
-           
+
         }
         public static Bai2.Dictionary Dic = new Bai2.Dictionary();
-        
+
         // thuoc tinh chuong trinh
-        Size CurrentSizeForm= new Size();
-        public static Home home=new Home();
-        Learn learn= new Learn();
-        Test test =new Test();
-        Setting setting=new Setting();
-        Search search=new Search();
-        Data data=new Data();
-        SelectGame game=new SelectGame();
+        bool CheckShowNotification;
+        Size CurrentSizeForm = new Size();
+        public static Home home = new Home();
+        Learn learn = new Learn();
+        Test test = new Test();
+        Setting setting = new Setting();
+        Search search = new Search();
+        Data data = new Data();
+        SelectGame game = new SelectGame();
         public static User userApp;
         HamCanThiet f;
         About about = new About();
         Help help = new Help();
-        public static UIUserSetting uiuser=new UIUserSetting();
-       
+        public static UIUserSetting uiuser = new UIUserSetting();
+
         //ket thuc khai bao thuoc tinh
         private void SetDefault()
         {
             this.pn_bar.GradientBottomLeft = Color.FromArgb(133, 203, 248);
-            this.pn_bar.GradientBottomRight = Color.FromArgb(0, 192, 192);           
+            this.pn_bar.GradientBottomRight = Color.FromArgb(0, 192, 192);
         }
-      
-       // login login_user = new login();
-          Loading loading = new Loading();
+
+        // login login_user = new login();
+        Loading loading = new Loading();
         public Mainform()
         {
             InitializeComponent();
+            CheckShowNotification = false;
             this.Opacity = 0;
             timer_FadeIn.Start();// tao hieu ung fade in 
             ProfileUser.ReadData();
             ProfileUser.ReadListMarkWord();
             ProfileUser.SoLanMoChuongTrinh++;
-          
-           //this.StartPosition = FormStartPosition.CenterScreen;
+            WidthNotificationBar = NotificationPanel.Width;
+            //this.StartPosition = FormStartPosition.CenterScreen;
             //"name of control".Cursor = new System.Windows.Forms.Cursor(Properties.Resources."name of image".Handle);
-           //this.Cursor  =new System.Windows.Forms.Cursor()
+            //this.Cursor  =new System.Windows.Forms.Cursor()
             //HideApplication();
             //login_user.Show();
-            
+
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -200,25 +204,25 @@ namespace Bai2
             userApp.LoadFile();
             f = new HamCanThiet();
             SetPropertiesApplication();
-            hienthitencuaso.Text = "Home";                
-           // ShowSelectIconButton(sender);
+            hienthitencuaso.Text = "Home";
+            // ShowSelectIconButton(sender);
             home.TopLevel = false;
             pn_show.Controls.Add(home);
-         
+
             home.Dock = DockStyle.Fill;
             home.Show();
             home.BringToFront();
-            
-          
-           // this.Show();
+
+
+            // this.Show();
             //this.ChangeColorBar(Color.FromArgb());
             //bt_home_Click(sender, e);
-           
-            
-            
+
+
+
         }
-       
-      
+
+
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -229,7 +233,7 @@ namespace Bai2
         {
             FadeClose(sender, e);
         }
-       
+
 
         private void pb_minimize_Click(object sender, EventArgs e)
         {
@@ -251,36 +255,36 @@ namespace Bai2
 
             aProp.SetValue(c, true, null);
         }
-       
+
         private void pb_maximize_Click(object sender, EventArgs e)
         {
             int nTaskBarHeight = Screen.PrimaryScreen.Bounds.Bottom - Screen.PrimaryScreen.WorkingArea.Bottom;
-            int w=Screen.PrimaryScreen.Bounds.Width;
-            int h=Screen.PrimaryScreen.Bounds.Height-nTaskBarHeight;
+            int w = Screen.PrimaryScreen.Bounds.Width;
+            int h = Screen.PrimaryScreen.Bounds.Height - nTaskBarHeight;
             if (this.Size == new System.Drawing.Size(w, h))
             {
-               // this.bunifuElipse1.ElipseRadius = 15;
+                // this.bunifuElipse1.ElipseRadius = 15;
                 this.Location = new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (CurrentSizeForm.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (CurrentSizeForm.Height / 2)); // ham di chuyen form ve vi tri chinh giua man hinh
                 this.Size = CurrentSizeForm;
                 setting.SetData(this.Size, this.pn_bar.GradientBottomLeft);
-                
+
             }
             else
             {
                 //this.bunifuElipse1.ElipseRadius = 0;
                 this.Location = new Point(0, 0);
-                this.Size = new System.Drawing.Size(w,h);
-                setting.SetData(this.Size, this.pn_bar.GradientBottomLeft);           
+                this.Size = new System.Drawing.Size(w, h);
+                setting.SetData(this.Size, this.pn_bar.GradientBottomLeft);
             }
         }
-       
+
         private void ShowSelectIconButton(object sender)// ham hien thi button nao dang duoc chon
         {
             pb_select_icon.Top = ((Control)sender).Top;
-            pb_select_icon.Height = ((Control)sender).Height;  
+            pb_select_icon.Height = ((Control)sender).Height;
         }
 
-         // ham xu ly cac phim chuc nang trong chuong trinh   
+        // ham xu ly cac phim chuc nang trong chuong trinh   
         private void HideAllFormControl()
         {
             pn_show.Hide();
@@ -300,11 +304,11 @@ namespace Bai2
                 pn_show.Show();
             }
         }
-       
+
         private void bt_learn_Click(object sender, EventArgs e)
         {
-           
-            if(hienthitencuaso.Text != "Learn")// thêm if  dể cho ko bị lag phần hiển thị
+
+            if (hienthitencuaso.Text != "Learn")// thêm if  dể cho ko bị lag phần hiển thị
             {
                 HideAllFormControl();
                 hienthitencuaso.Text = "Learn";
@@ -317,9 +321,9 @@ namespace Bai2
                 learn.Show();
                 learn.BringToFront();
                 pn_show.Show();
-            
+
             }
-            
+
         }
 
         private void bt_test_Click(object sender, EventArgs e)
@@ -335,15 +339,15 @@ namespace Bai2
                 test.Show();
                 test.BringToFront();
                 pn_show.Show();
-            }         
+            }
         }
-        
+
         private void bt_setting_Click(object sender, EventArgs e)
         {
             if (hienthitencuaso.Text != "Setting")
             {
                 HideAllFormControl();
-                setting.SetData(this.Size,this.pn_bar.GradientBottomLeft);
+                setting.SetData(this.Size, this.pn_bar.GradientBottomLeft);
                 setting.change += setting_change;
                 hienthitencuaso.Text = "Setting";
                 ShowSelectIconButton(sender);
@@ -353,7 +357,7 @@ namespace Bai2
                 setting.Show();
                 setting.BringToFront();
                 pn_show.Show();
-            }   
+            }
         }
 
         private void ChangeColorBar(Color c)
@@ -370,14 +374,14 @@ namespace Bai2
             }
             else
             {
-               
+
                 this.learn.SetDefault();
             }
             this.ChangeColorBar(e.color);
             this.Size = e.size;
             if (e.size.Width == Screen.PrimaryScreen.Bounds.Size.Width)
             {
-               // this.bunifuElipse1.ElipseRadius = 0;
+                // this.bunifuElipse1.ElipseRadius = 0;
                 this.Location = new Point(0, 0);
             }
             else
@@ -388,7 +392,7 @@ namespace Bai2
             //this.Location=new Point((Screen.PrimaryScreen.Bounds.Size.Width / 2) - (this.Size.Width / 2), (Screen.PrimaryScreen.Bounds.Size.Height / 2) - (this.Size.Height / 2)); // ham di chuyen form ve vi tri chinh giua man hinh
 
         }
-        
+
         private void bt_search_Click(object sender, EventArgs e)
         {
             if (hienthitencuaso.Text != "Search")
@@ -404,7 +408,7 @@ namespace Bai2
                 pn_show.Show();
             }
         }
-       
+
         private void bt_data_Click(object sender, EventArgs e)
         {
             if (hienthitencuaso.Text != "Data")
@@ -448,7 +452,7 @@ namespace Bai2
                 pn_show.Show();
             }
         }
-     
+
         private void pb_info_Click(object sender, EventArgs e)
         {
             about.SetColor(this.pn_bar.GradientBottomLeft);
@@ -457,12 +461,15 @@ namespace Bai2
 
         private void pb_notifications_Click(object sender, EventArgs e)
         {
+            NotificationPanel.BringToFront();
+            //pn_show.Controls.Add(NotificationPanel);
+            timer2.Start();
 
         }
 
         private void timer_FadeIn_Tick(object sender, EventArgs e)
         {
-            
+
             this.Opacity += .05;
             if (this.Opacity == 1)
             {
@@ -486,7 +493,7 @@ namespace Bai2
             toolTip.SetToolTip(this.pb_maximize, "Mở Rộng Chương Trình");
             toolTip.SetToolTip(this.pb_info, "Thông Tin Phiên Bản Phần Mềm");
             toolTip.SetToolTip(this.bt_data, "Thẻ Dữ Liệu Chương Trình");
-            
+
 
         }
 
@@ -496,14 +503,41 @@ namespace Bai2
         }
         private void PaintBorderForm()
         {
-            
+
         }
 
         private void Mainform_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, this.pn_bar.ClientRectangle, Color.DimGray, ButtonBorderStyle.Solid);
         }
-        
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (CheckShowNotification == true)
+            {
+                NotificationPanel.Location = new Point(this.NotificationPanel.Location.X + 100, this.NotificationPanel.Location.Y);
+                if (NotificationPanel.Location.X <= 600)
+                {
+                    timer2.Stop();
+                    CheckShowNotification = false;
+                    this.Refresh();
+                }
+
+            }
+            else
+            {
+                NotificationPanel.Location = new Point( this.NotificationPanel.Location.X - 100,this.NotificationPanel.Location.Y);
+                if (NotificationPanel.Location.X >= 700)
+                {
+                    timer2.Stop();
+                    CheckShowNotification = true;
+                    this.Refresh();
+                }
+            }
+
+
+        }
+
     }
-    
+
 }

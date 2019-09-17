@@ -49,40 +49,7 @@ namespace Bai2
             }
         }
 
-        private void bt_Ok_Click(object sender, EventArgs e)
-        { 
-            if (SizeOfMainForm.selectedValue == "1000 x 800")
-            {
-                change(this, new ChangeUI { size = new Size(1000, 800) ,color =c});
-            }
-            else if (SizeOfMainForm.selectedValue == "1280 x 720")
-            {
-                change(this, new ChangeUI { size = new Size(1280,720) ,color= c});
-            }
-            else if (SizeOfMainForm.selectedValue == "1228 x 842")
-            {
-                change(this, new ChangeUI { size = new Size(1228, 842), color = c });
-            }
-            else if (SizeOfMainForm.selectedValue == "1600 x 900")
-            {
-                change(this, new ChangeUI { size = new Size(1600, 900), color = c });
-            }
-            else if (SizeOfMainForm.selectedValue == "Fullscreen")
-            {
-                int nTaskBarHeight = Screen.PrimaryScreen.Bounds.Bottom - Screen.PrimaryScreen.WorkingArea.Bottom;
-                int w = Screen.PrimaryScreen.Bounds.Width;
-                int h = Screen.PrimaryScreen.Bounds.Height - nTaskBarHeight;
-                change(this, new ChangeUI { size = new Size(w, h), color = c });
-            }
-            if (File.Exists(@"user_data\setting.dat"))
-            {
-                File.Delete(@"user_data\setting.dat");
-                
-            }
-            f.SetPropertiesUser(SizeOfMainForm.selectedValue, c.R.ToString(),c.G.ToString(),c.B.ToString());
-           
-                 
-        }
+    
         private void ResetColorSelect()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting));
@@ -153,6 +120,66 @@ namespace Bai2
             toolTip.SetToolTip(this.reset_option,"Cài lại mặc định cho chương trình");
             toolTip.SetToolTip(this.SizeOfMainForm, "Cài lại kích thước chương trình");
             toolTip.SetToolTip(this.reset_option, "Cài lại mặc định cho chương trình");
+        }
+
+        private void btn_OK_Click(object sender, EventArgs e)
+        {
+            if (SizeOfMainForm.selectedValue == "1000 x 800")
+            {
+                change(this, new ChangeUI { size = new Size(1000, 800), color = c });
+            }
+            else if (SizeOfMainForm.selectedValue == "1280 x 720")
+            {
+                change(this, new ChangeUI { size = new Size(1280, 720), color = c });
+            }
+            else if (SizeOfMainForm.selectedValue == "1228 x 842")
+            {
+                change(this, new ChangeUI { size = new Size(1228, 842), color = c });
+            }
+            else if (SizeOfMainForm.selectedValue == "1600 x 900")
+            {
+                change(this, new ChangeUI { size = new Size(1600, 900), color = c });
+            }
+            else if (SizeOfMainForm.selectedValue == "Fullscreen")
+            {
+                int nTaskBarHeight = Screen.PrimaryScreen.Bounds.Bottom - Screen.PrimaryScreen.WorkingArea.Bottom;
+                int w = Screen.PrimaryScreen.Bounds.Width;
+                int h = Screen.PrimaryScreen.Bounds.Height - nTaskBarHeight;
+                change(this, new ChangeUI { size = new Size(w, h), color = c });
+            }
+            if (File.Exists(@"user_data\setting.dat"))
+            {
+                File.Delete(@"user_data\setting.dat");
+
+            }
+            f.SetPropertiesUser(SizeOfMainForm.selectedValue, c.R.ToString(), c.G.ToString(), c.B.ToString());
+           
+        }
+
+        private void btn_Apply_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_pickcolor_Click(object sender, EventArgs e)
+        {
+            ColorDialog cld = new ColorDialog();
+            if (cld.ShowDialog() == DialogResult.OK)
+            {
+                string str = null;
+                str = cld.Color.Name;
+
+            }
         }
     }
 }

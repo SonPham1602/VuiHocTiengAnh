@@ -260,6 +260,9 @@ namespace Bai2
             }
             
         }
+        /// <summary>
+        /// This function wil set data in drop down Unit
+        /// </summary>
         private void SetDataListUnit()
         {
             select_unit.Clear();

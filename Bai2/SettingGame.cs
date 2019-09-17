@@ -158,7 +158,7 @@ namespace Bai2
 
         private void SettingGame_Load(object sender, EventArgs e)
         {
-            
+            SetDataSelectList();
         }
 
         private void btn_Ok_Click(object sender, EventArgs e)
@@ -185,7 +185,23 @@ namespace Bai2
                 SoundInGame = false;
             }
         }
+        private void SetDataSelectList()
+        {
+            checkedListBox_Select_units.Items.Clear();
+            List<string> arrayList = Mainform.Dic.RefeshAndLoadListUnit();
+            for (int i = 0; i < arrayList.Count; i++)
+            {
 
+                checkedListBox_Select_units.Items.Add(ClearUnderscoreInString(arrayList[i]));
+            }
+            checkedListBox_Select_units.Refresh();
+        }
+        private string ClearUnderscoreInString(string str)
+        {
+            str = str.Replace('_', ' ');
+            return str;
+        }
+       
       
     }
 }
