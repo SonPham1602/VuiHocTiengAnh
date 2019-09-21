@@ -78,23 +78,13 @@ namespace Bai2
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            if (txtName.Text == "")
-            {
-                MessageBox.Show("Không được để trống tên File", "THÔNG BÁO");
-            }
-            else
-            {
-                if (img != null)
-                {
-                    f.SaveImageData(img, txtName.Text);
-                }
-            }
+            
            
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-            FadeClose(sender, e);
+           
 
         }
 
@@ -120,6 +110,25 @@ namespace Bai2
         private void AddDataForm_Load(object sender, EventArgs e)
         {
             FadeIn(sender, e);
+        }
+        private void button_Ok_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text == "")
+            {
+                MessageBox.Show("Không được để trống tên File", "THÔNG BÁO");
+            }
+            else
+            {
+                if (img != null)
+                {
+                    f.SaveImageData(img, txtName.Text);
+                }
+            }
+        }
+
+        private void button_cancel_Click(object sender, EventArgs e)
+        {
+            FadeClose(sender, e);
         }
     }
 }

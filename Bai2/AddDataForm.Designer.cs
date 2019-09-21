@@ -33,14 +33,16 @@
             this.pb_show = new System.Windows.Forms.PictureBox();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.btn_open_image = new System.Windows.Forms.Button();
-            this.btn_ok = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_draw = new System.Windows.Forms.Button();
             this.bunifuElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.button_Ok = new Bunifu.Framework.UI.BunifuImageButton();
+            this.button_cancel = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pb_show)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_Ok)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_cancel)).BeginInit();
             this.SuspendLayout();
             // 
             // pb_show
@@ -76,20 +78,6 @@
             this.btn_open_image.UseVisualStyleBackColor = false;
             this.btn_open_image.Click += new System.EventHandler(this.btn_open_image_Click);
             // 
-            // btn_ok
-            // 
-            this.btn_ok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(98)))));
-            this.btn_ok.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ok.ForeColor = System.Drawing.Color.White;
-            this.btn_ok.Location = new System.Drawing.Point(12, 389);
-            this.btn_ok.Name = "btn_ok";
-            this.btn_ok.Size = new System.Drawing.Size(151, 50);
-            this.btn_ok.TabIndex = 0;
-            this.btn_ok.TabStop = false;
-            this.btn_ok.Text = "OK";
-            this.btn_ok.UseVisualStyleBackColor = false;
-            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
-            // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,20 +85,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(243, 23);
             this.txtName.TabIndex = 8;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(97)))), ((int)(((byte)(98)))));
-            this.btn_cancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.Location = new System.Drawing.Point(243, 389);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(151, 50);
-            this.btn_cancel.TabIndex = 0;
-            this.btn_cancel.TabStop = false;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // label1
             // 
@@ -152,18 +126,48 @@
             this.bunifuElipse.ElipseRadius = 5;
             this.bunifuElipse.TargetControl = this;
             // 
+            // button_Ok
+            // 
+            this.button_Ok.BackColor = System.Drawing.Color.Transparent;
+            this.button_Ok.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Ok.Image = ((System.Drawing.Image)(resources.GetObject("button_Ok.Image")));
+            this.button_Ok.ImageActive = null;
+            this.button_Ok.Location = new System.Drawing.Point(15, 387);
+            this.button_Ok.Name = "button_Ok";
+            this.button_Ok.Size = new System.Drawing.Size(148, 59);
+            this.button_Ok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.button_Ok.TabIndex = 13;
+            this.button_Ok.TabStop = false;
+            this.button_Ok.Zoom = 10;
+            this.button_Ok.Click += new System.EventHandler(this.button_Ok_Click);
+            // 
+            // button_cancel
+            // 
+            this.button_cancel.BackColor = System.Drawing.Color.Transparent;
+            this.button_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_cancel.Image = ((System.Drawing.Image)(resources.GetObject("button_cancel.Image")));
+            this.button_cancel.ImageActive = null;
+            this.button_cancel.Location = new System.Drawing.Point(246, 387);
+            this.button_cancel.Name = "button_cancel";
+            this.button_cancel.Size = new System.Drawing.Size(148, 59);
+            this.button_cancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.button_cancel.TabIndex = 14;
+            this.button_cancel.TabStop = false;
+            this.button_cancel.Zoom = 10;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
+            // 
             // AddDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(406, 467);
+            this.ClientSize = new System.Drawing.Size(406, 462);
+            this.Controls.Add(this.button_cancel);
+            this.Controls.Add(this.button_Ok);
             this.Controls.Add(this.btn_draw);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.btn_open_image);
             this.Controls.Add(this.txtPath);
             this.Controls.Add(this.pb_show);
@@ -175,6 +179,8 @@
             this.Text = "AddDataForm";
             this.Load += new System.EventHandler(this.AddDataForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_show)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_Ok)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_cancel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,12 +191,12 @@
         private System.Windows.Forms.PictureBox pb_show;
         private System.Windows.Forms.TextBox txtPath;
         private System.Windows.Forms.Button btn_open_image;
-        private System.Windows.Forms.Button btn_ok;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_draw;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse;
+        private Bunifu.Framework.UI.BunifuImageButton button_cancel;
+        private Bunifu.Framework.UI.BunifuImageButton button_Ok;
     }
 }

@@ -183,7 +183,7 @@ namespace Bai2
           
             if (thietlap.Time_Test == 0)
             {
-                MessageBox.Show("Chưa cài đặt Chương Trình", "THÔNG BÁO");
+                MessageBoxCustoms mess = new MessageBoxCustoms("Chưa cài đặt chương trình", TypeMessageEnum.THONGBAO);
             }
             else
             {
@@ -322,7 +322,7 @@ namespace Bai2
                         {
                             timer1.Enabled = !timer1.Enabled;
                             TrangThai = Status.pause;
-                            MessageBox.Show("Chương trình đang tạm dừng\n Bấm P để tiếp tục", "THÔNG BÁO");
+                            MessageBoxCustoms mess = new MessageBoxCustoms("Chương trình đang tạm dừng\n Bấm P để tiếp tục", TypeMessageEnum.THONGBAO);
                         }
                         break;
                    
