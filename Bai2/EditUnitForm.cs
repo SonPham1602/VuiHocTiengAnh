@@ -46,7 +46,9 @@ namespace Bai2
         }
         private void btn_OK_Click(object sender, EventArgs e)
         {
-            
+            Mainform.Dic.UpdateUnit(Mainform.Dic.GetNameOfUnitByNumber(numberUnit), TypeUpdateUnit.CHANGE,tb_noidung.Text);
+            MessageBoxCustoms mess = new MessageBoxCustoms("Unit đã được cập nhật dữ liệu",TypeMessageEnum.THONGBAO);
+            this.Close();
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

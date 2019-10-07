@@ -184,24 +184,7 @@ namespace Bai2
             return true;
 
         }
-        private void button_ok_Click(object sender, EventArgs e)
-        {
-            if (Check() == true)
-            {
-                FadeClose(sender,e);
-               
-                this.Hide();
-            }
-            label1.Focus();
-            
-        }
-        private void button_cancel_Click(object sender, EventArgs e)
-        {
-            label1.Focus();
-            FadeClose(sender, e);
-            
-            this.Hide();
-        }
+     
 
         private void textbox_time_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -342,6 +325,25 @@ namespace Bai2
         {
             str = str.Replace('_', ' ');
             return str;
+        }
+
+        private void btn_OK_Click(object sender, EventArgs e)
+        {
+            if (Check() == true)
+            {
+                FadeClose(sender, e);
+
+                this.Hide();
+            }
+            label1.Focus();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+              label1.Focus();
+            FadeClose(sender, e);
+            
+            this.Hide();
         }
        
 

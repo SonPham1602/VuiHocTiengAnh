@@ -211,7 +211,7 @@ namespace Bai2
         }
         private void select_unit_onItemSelected(object sender, EventArgs e)
         {
-            
+           
             int Selected_unit=select_unit.selectedIndex+1;
             //MessageBox.Show(Selected_unit.ToString());
             Mainform.Dic.getStartEndUnit(ref start, ref end, Selected_unit);// luu y la phai them ref neu ham co ref
@@ -270,6 +270,13 @@ namespace Bai2
             {
                 select_unit.AddItem(Mainform.Dic.GetNameOfUnitByNumber(i+1));
             }
+        }
+
+      
+
+        private void select_unit_Enter(object sender, EventArgs e)
+        {
+            SetDataListUnit();
         }
 
     }

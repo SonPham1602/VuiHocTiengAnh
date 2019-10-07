@@ -103,7 +103,16 @@ namespace Bai2
                 {
                     if (arrayListWord[i] != -1)
                     {
-                        hienthianh.Image = Dic.getImageWordByNumber(arrayListWord[i]);
+                        if (Mainform.Dic.getWordByNumber(arrayListWord[i]).checkImageExist() == true)
+                        {
+                            hienthianh.Image = Mainform.Dic.getImageWordByNumber(arrayListWord[i]);
+                           
+                        }
+                        else
+                        {
+                            hienthianh.Image = Image.FromFile(@"data/emptyImage.png");
+                        }
+
                         lb_word.Text = Dic.GetMeanWord(arrayListWord[i]);
                         vitrird = i;
                         break;

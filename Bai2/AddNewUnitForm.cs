@@ -33,11 +33,38 @@ namespace Bai2
             this.Close();
         }
 
-        private void btn_OK_Click(object sender, EventArgs e)
+
+        Timer t1 = new Timer();
+        void fadeIn(object sender, EventArgs e)
+        {
+            if (Opacity >= 1)
+                t1.Stop();   //this stops the timer if the form is completely displayed
+            else
+                Opacity += 0.09;
+        }
+        private void AddNewUnitForm_Load(object sender, EventArgs e)
+        {
+            Opacity = 0;      //first the opacity is 0
+            t1.Interval = 10;  //we'll increase the opacity every 10ms
+            t1.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
+            t1.Start();
+        }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                const int CS_DROPSHADOW = 0x20000;
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= CS_DROPSHADOW;
+                return cp;
+            }
+        }
+
+        private void button_OK_Click(object sender, EventArgs e)
         {
             string message = "Do you want to save ?";
             string title = "Save Window";
-          
+
 
             if (tb_name.Text == "" || tb_noidung.Text == "")
             {
@@ -49,7 +76,7 @@ namespace Bai2
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    Mainform.Dic.AddListWordInNewUnit(tb_name.Text,tb_noidung.Text);
+                    Mainform.Dic.AddListWordInNewUnit(tb_name.Text, tb_noidung.Text);
                     Mainform.Dic.ClearAllUnit();
                     Mainform.Dic.addword();
                     MessageBoxCustoms mes = new MessageBoxCustoms("Lưu thành công", TypeMessageEnum.THONGBAO);
@@ -58,28 +85,13 @@ namespace Bai2
                 else
                 {
                     this.Close();
-                }  
+                }
             }
         }
 
-        private void btn_cancel_Click(object sender, EventArgs e)
+        private void button_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void AddNewUnitForm_Load(object sender, EventArgs e)
-        {
-
-        }
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                const int CS_DROPSHADOW = 0x20000;
-                CreateParams cp = base.CreateParams;
-                cp.ClassStyle |= CS_DROPSHADOW;
-                return cp;
-            }
         }
     }
 }

@@ -48,10 +48,12 @@ namespace Bai2
         private string pathImage=string.Empty;
         private string nameImage = string.Empty;
         private HamCanThiet f = new HamCanThiet();
+     
         public AddDataForm()
         {
             InitializeComponent();           
         }
+     
 
         private void btn_open_image_Click(object sender, EventArgs e)
         {

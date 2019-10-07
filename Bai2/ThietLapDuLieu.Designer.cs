@@ -41,13 +41,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button_ok = new System.Windows.Forms.Button();
-            this.button_cancel = new System.Windows.Forms.Button();
             this.lb_hienthisocauhoi = new System.Windows.Forms.Label();
             this.textbox_qt_number = new System.Windows.Forms.TextBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label8 = new System.Windows.Forms.Label();
             this.checkAllUnit = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.btn_OK = new System.Windows.Forms.PictureBox();
+            this.btn_cancel = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_OK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cancel)).BeginInit();
             this.SuspendLayout();
             // 
             // checkedListBox_Select_units
@@ -156,26 +158,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "End";
             // 
-            // button_ok
-            // 
-            this.button_ok.Location = new System.Drawing.Point(375, 397);
-            this.button_ok.Name = "button_ok";
-            this.button_ok.Size = new System.Drawing.Size(119, 65);
-            this.button_ok.TabIndex = 11;
-            this.button_ok.Text = "OK";
-            this.button_ok.UseVisualStyleBackColor = true;
-            this.button_ok.Click += new System.EventHandler(this.button_ok_Click);
-            // 
-            // button_cancel
-            // 
-            this.button_cancel.Location = new System.Drawing.Point(375, 316);
-            this.button_cancel.Name = "button_cancel";
-            this.button_cancel.Size = new System.Drawing.Size(119, 65);
-            this.button_cancel.TabIndex = 12;
-            this.button_cancel.Text = "Cancel";
-            this.button_cancel.UseVisualStyleBackColor = true;
-            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
-            // 
             // lb_hienthisocauhoi
             // 
             this.lb_hienthisocauhoi.AutoSize = true;
@@ -221,18 +203,42 @@
             this.checkAllUnit.TabIndex = 17;
             this.checkAllUnit.OnChange += new System.EventHandler(this.checkAllUnit_OnChange);
             // 
+            // btn_OK
+            // 
+            this.btn_OK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_OK.Image = ((System.Drawing.Image)(resources.GetObject("btn_OK.Image")));
+            this.btn_OK.Location = new System.Drawing.Point(375, 395);
+            this.btn_OK.Name = "btn_OK";
+            this.btn_OK.Size = new System.Drawing.Size(135, 57);
+            this.btn_OK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_OK.TabIndex = 18;
+            this.btn_OK.TabStop = false;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancel.Image")));
+            this.btn_cancel.Location = new System.Drawing.Point(375, 332);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(135, 57);
+            this.btn_cancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_cancel.TabIndex = 19;
+            this.btn_cancel.TabStop = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
             // ThietLapDuLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(522, 477);
+            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.checkAllUnit);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textbox_qt_number);
             this.Controls.Add(this.lb_hienthisocauhoi);
-            this.Controls.Add(this.button_cancel);
-            this.Controls.Add(this.button_ok);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -254,6 +260,8 @@
             this.Text = "Thiet Lap Du Lieu";
             this.Load += new System.EventHandler(this.ThietLapDuLieu_Load);
             this.Shown += new System.EventHandler(this.ThietLapDuLieu_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.btn_OK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cancel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,8 +275,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button_ok;
-        private System.Windows.Forms.Button button_cancel;
         public System.Windows.Forms.CheckedListBox checkedListBox_Select_units;
         public int Start_Unit;
         public int End_Unit;
@@ -285,5 +291,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuCheckbox checkAllUnit;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox btn_cancel;
+        private System.Windows.Forms.PictureBox btn_OK;
     }
 }

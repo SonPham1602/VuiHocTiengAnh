@@ -160,6 +160,11 @@ namespace Bai2
         {
             EditUnitForm edit = new EditUnitForm(NumerOfUnitReset);
             edit.ShowDialog();
+            Mainform.Dic.RefeshAndLoadListUnit();
+            Mainform.Dic.ClearAllUnit();
+            Mainform.Dic.addword();
+            dic = Mainform.Dic;
+            SetDataComboBoxUnit();
         }
 
         private void pb_deleteUnit_Click(object sender, EventArgs e)

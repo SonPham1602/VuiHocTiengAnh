@@ -130,6 +130,7 @@
             this.select_unit.Size = new System.Drawing.Size(196, 37);
             this.select_unit.TabIndex = 6;
             this.select_unit.onItemSelected += new System.EventHandler(this.select_unit_onItemSelected);
+            this.select_unit.Enter += new System.EventHandler(this.select_unit_Enter);
             // 
             // bunifuElipse1
             // 
@@ -255,6 +256,7 @@
             // 
             // pb_mark
             // 
+            this.pb_mark.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_mark.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_mark.Image = global::Bai2.Properties.Resources.star1;
             this.pb_mark.Location = new System.Drawing.Point(949, 613);

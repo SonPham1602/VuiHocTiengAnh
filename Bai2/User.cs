@@ -202,7 +202,7 @@ namespace Bai2
         /// 
         /// </summary>
         /// <param name="NameUnit"> Name of Unit which you need to update</param>
-        public void UpdateUnit(string NameUnit,TypeUpdateUnit type)
+        public void UpdateUnit(string NameUnit,TypeUpdateUnit type,string content)
         {
             if (type == TypeUpdateUnit.CREATE)
             {
@@ -213,7 +213,15 @@ namespace Bai2
             }
             else if (type == TypeUpdateUnit.CHANGE)
             {
-
+                string path = @"data\" + NameUnit + ".txt";
+                if (content == String.Empty)
+                {
+                    File.Create(path);
+                }
+                else
+                {
+                    File.WriteAllText(path, content);
+                }
             }
             else if (type == TypeUpdateUnit.DELETE)
             {
@@ -1095,7 +1103,7 @@ namespace Bai2
         {
             string[] data = File.ReadAllLines(@"user_data\setting.dat");
             return data;
-        }
+        } 
         public void SetPropertiesUser(string SizeOfForm, string r, string g, string b)
         {
             string[] data = new string[4];
