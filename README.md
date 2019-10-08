@@ -15,7 +15,9 @@ To Do List
 - Create apply button in Setting form for user can see change
 - Making list notification for user
 - Adding Dark mode
+
 08/10/2019
+
 List Done
 - Edit Word in Unit
 
