@@ -36,17 +36,17 @@
             this.tb_name = new System.Windows.Forms.TextBox();
             this.tb_noidung = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.button_Cancel = new System.Windows.Forms.PictureBox();
+            this.button_OK = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label3 = new System.Windows.Forms.Label();
-            this.button_OK = new System.Windows.Forms.PictureBox();
-            this.button_Cancel = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_OK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_Cancel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_OK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -122,6 +122,32 @@
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(596, 75);
             this.bunifuGradientPanel2.TabIndex = 1;
             // 
+            // button_Cancel
+            // 
+            this.button_Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Cancel.Image = ((System.Drawing.Image)(resources.GetObject("button_Cancel.Image")));
+            this.button_Cancel.Location = new System.Drawing.Point(431, 15);
+            this.button_Cancel.Name = "button_Cancel";
+            this.button_Cancel.Size = new System.Drawing.Size(141, 47);
+            this.button_Cancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.button_Cancel.TabIndex = 3;
+            this.button_Cancel.TabStop = false;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
+            // 
+            // button_OK
+            // 
+            this.button_OK.BackColor = System.Drawing.Color.Transparent;
+            this.button_OK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_OK.Image = ((System.Drawing.Image)(resources.GetObject("button_OK.Image")));
+            this.button_OK.Location = new System.Drawing.Point(34, 15);
+            this.button_OK.Name = "button_OK";
+            this.button_OK.Size = new System.Drawing.Size(141, 47);
+            this.button_OK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.button_OK.TabIndex = 2;
+            this.button_OK.TabStop = false;
+            this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
+            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 0;
@@ -158,32 +184,6 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "ADD NEW UNIT";
             // 
-            // button_OK
-            // 
-            this.button_OK.BackColor = System.Drawing.Color.Transparent;
-            this.button_OK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_OK.Image = ((System.Drawing.Image)(resources.GetObject("button_OK.Image")));
-            this.button_OK.Location = new System.Drawing.Point(34, 15);
-            this.button_OK.Name = "button_OK";
-            this.button_OK.Size = new System.Drawing.Size(141, 47);
-            this.button_OK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.button_OK.TabIndex = 2;
-            this.button_OK.TabStop = false;
-            this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
-            // 
-            // button_Cancel
-            // 
-            this.button_Cancel.BackColor = System.Drawing.Color.Transparent;
-            this.button_Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_Cancel.Image = ((System.Drawing.Image)(resources.GetObject("button_Cancel.Image")));
-            this.button_Cancel.Location = new System.Drawing.Point(431, 15);
-            this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(141, 47);
-            this.button_Cancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.button_Cancel.TabIndex = 3;
-            this.button_Cancel.TabStop = false;
-            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
-            // 
             // AddNewUnitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,9 +201,9 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.bunifuGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button_OK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button_Cancel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_OK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_close)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

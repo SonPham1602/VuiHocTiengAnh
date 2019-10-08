@@ -177,7 +177,8 @@ namespace Bai2
             if (cld.ShowDialog() == DialogResult.OK)
             {
                 string str = null;
-                str = cld.Color.Name;
+                c = Color.FromArgb(cld.Color.ToArgb());
+                MessageBoxCustoms mess = new MessageBoxCustoms("Màu đã được chọn nhấn nút OK để thay đổi", TypeMessageEnum.THONGBAO);
 
             }
         }

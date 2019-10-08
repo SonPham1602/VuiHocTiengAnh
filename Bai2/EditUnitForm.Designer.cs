@@ -33,17 +33,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_OK = new System.Windows.Forms.Button();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_name = new System.Windows.Forms.TextBox();
             this.tb_noidung = new System.Windows.Forms.TextBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.button_Cancel = new System.Windows.Forms.PictureBox();
+            this.button_OK = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button_Cancel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_OK)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -74,37 +76,17 @@
             // 
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel2.Controls.Add(this.btn_cancel);
-            this.bunifuGradientPanel2.Controls.Add(this.btn_OK);
+            this.bunifuGradientPanel2.Controls.Add(this.button_Cancel);
+            this.bunifuGradientPanel2.Controls.Add(this.button_OK);
             this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(12, 397);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(12, 391);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(580, 71);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(580, 77);
             this.bunifuGradientPanel2.TabIndex = 23;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Location = new System.Drawing.Point(405, 15);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(112, 39);
-            this.btn_cancel.TabIndex = 1;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // btn_OK
-            // 
-            this.btn_OK.Location = new System.Drawing.Point(64, 15);
-            this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(112, 39);
-            this.btn_OK.TabIndex = 0;
-            this.btn_OK.Text = "OK";
-            this.btn_OK.UseVisualStyleBackColor = true;
-            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // bunifuGradientPanel1
             // 
@@ -170,6 +152,32 @@
             this.bunifuDragControl1.TargetControl = this;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // button_Cancel
+            // 
+            this.button_Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_Cancel.Image = ((System.Drawing.Image)(resources.GetObject("button_Cancel.Image")));
+            this.button_Cancel.Location = new System.Drawing.Point(418, 12);
+            this.button_Cancel.Name = "button_Cancel";
+            this.button_Cancel.Size = new System.Drawing.Size(141, 47);
+            this.button_Cancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.button_Cancel.TabIndex = 5;
+            this.button_Cancel.TabStop = false;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
+            // 
+            // button_OK
+            // 
+            this.button_OK.BackColor = System.Drawing.Color.Transparent;
+            this.button_OK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_OK.Image = ((System.Drawing.Image)(resources.GetObject("button_OK.Image")));
+            this.button_OK.Location = new System.Drawing.Point(21, 12);
+            this.button_OK.Name = "button_OK";
+            this.button_OK.Size = new System.Drawing.Size(141, 47);
+            this.button_OK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.button_OK.TabIndex = 4;
+            this.button_OK.TabStop = false;
+            this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
+            // 
             // EditUnitForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +196,8 @@
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button_Cancel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button_OK)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,14 +208,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btn_close;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
-        private System.Windows.Forms.Button btn_cancel;
-        private System.Windows.Forms.Button btn_OK;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_name;
         private System.Windows.Forms.TextBox tb_noidung;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.PictureBox button_Cancel;
+        private System.Windows.Forms.PictureBox button_OK;
 
     }
 }
